@@ -71,6 +71,22 @@ ACID 是数据库事务的四大特性，保证数据的可靠性和一致性：
 
 ![image-20250326163438160](mysql相关.assets/image-20250326163438160.png)
 
-# 5.undolog和redolog的区别
+## undolog和redolog的区别
 
-![image-20250327185522689](/Users/zry/Desktop/sky-out/必胜复习笔记/mysql相关.assets/image-20250327185522689.png)
+![image-20250327185905894](mysql相关.assets/image-20250327185905894.png)
+
+![image-20250327190050010](mysql相关.assets/image-20250327190050010.png)
+
+![image-20250327190201074](mysql相关.assets/image-20250327190201074.png)
+
+![image-20250327190223508](mysql相关.assets/image-20250327190223508.png)
+
+## MVCC实现原理--隔离性
+
+![image-20250329172436408](mysql相关.assets/image-20250329172436408.png)
+
+![image-20250329171912682](mysql相关.assets/image-20250329171912682.png)
+
+# 主从同步
+
+![image-20250330100424462](mysql相关.assets/image-20250330100424462.png)
