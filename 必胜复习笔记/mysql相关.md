@@ -44,7 +44,7 @@
 
 ### 索引失效
 
-###### 1）违反最左前缀法则![image-20250326160250425](mysql相关.assets/image-20250326160250425.png)![image-20250326160442763](mysql相关.assets/image-20250326160442763.png)![image-20250326160604723](mysql相关.assets/image-20250326160604723.png)![image-20250326160722904](mysql相关.assets/image-20250326160722904.png)![image-20250326160805111](mysql相关.assets/image-20250326160805111.png)
+1）违反最左前缀法则![image-20250326160250425](mysql相关.assets/image-20250326160250425.png)![image-20250326160442763](mysql相关.assets/image-20250326160442763.png)![image-20250326160604723](mysql相关.assets/image-20250326160604723.png)![image-20250326160722904](mysql相关.assets/image-20250326160722904.png)![image-20250326160805111](mysql相关.assets/image-20250326160805111.png)
 
 ![image-20250326160921379](mysql相关.assets/image-20250326160921379.png)
 
@@ -70,3 +70,7 @@ ACID 是数据库事务的四大特性，保证数据的可靠性和一致性：
 ![image-20250326163359177](mysql相关.assets/image-20250326163359177.png)
 
 ![image-20250326163438160](mysql相关.assets/image-20250326163438160.png)
+
+# 5.undolog和redolog的区别
+
+![image-20250327185522689](/Users/zry/Desktop/sky-out/必胜复习笔记/mysql相关.assets/image-20250327185522689.png)
