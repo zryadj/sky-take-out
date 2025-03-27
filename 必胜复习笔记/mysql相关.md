@@ -73,4 +73,4 @@ ACID 是数据库事务的四大特性，保证数据的可靠性和一致性：
 
 # 5.undolog和redolog的区别
 
-![image-20250327185522689](/Users/zry/Desktop/sky-out/必胜复习笔记/mysql相关.assets/image-20250327185522689.png)
+![image-20250327185905894](mysql相关.assets/image-20250327185905894.png)
