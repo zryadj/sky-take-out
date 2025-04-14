@@ -119,8 +119,39 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee queryByOne(Long id) {
-        return employeeMapper.queryByOne(id);
+        Employee employee = employeeMapper.queryByOne(id);
+        employee.setPassword("****");
+        return employee;
 
+    }
+
+    /**
+     * 修改状态
+     *
+     * @param status
+     * @param id
+     */
+    @Override
+    public void updateStatus(Integer status, Long id) {
+        Employee employee = Employee.builder().id(id).status(status)
+                .updateUser(BaseContext.getCurrentId()).updateTime(LocalDateTime.now()).build();
+        employeeMapper.update(employee);
+    }
+
+    /**
+     * 修改员工
+     *
+     * @param employeeDTO
+     */
+    @Override
+    public void update(EmployeeDTO employeeDTO) {
+        //查询当前是否具有修改用户的权限 todo
+        //查询用户是否被禁用
+        Employee employee = new Employee();
+        BeanUtils.copyProperties(employeeDTO, employee);
+        employee.setUpdateUser(BaseContext.getCurrentId());
+        employee.setUpdateTime(LocalDateTime.now());
+        employeeMapper.update(employee);
     }
 
 }

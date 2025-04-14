@@ -12,6 +12,7 @@ import com.sky.service.EmployeeService;
 import com.sky.utils.JwtUtil;
 import com.sky.vo.EmployeeLoginVO;
 import io.swagger.annotations.ApiOperation;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -25,13 +26,14 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/admin/employee")
+@RequiredArgsConstructor
 @Slf4j
 public class EmployeeController {
 
-    @Autowired
-    private EmployeeService employeeService;
-    @Autowired
-    private JwtProperties jwtProperties;
+
+    private final EmployeeService employeeService;
+
+    private final JwtProperties jwtProperties;
 
     /**
      * 登录
@@ -101,11 +103,26 @@ public class EmployeeController {
     @GetMapping("/{id}")
     @ApiOperation("查询一个员工")
     public Result<Employee> query(@PathVariable Long id) {
-        return Result.success( employeeService.queryByOne(id));
+        return Result.success(employeeService.queryByOne(id));
     }
-//    /**
-//     * 修改员工
-//     */
-//    @GetMapping
-//    @ApiOperation("修改员工")
+    /**
+     * 修改员工
+     */
+    @PutMapping
+    @ApiOperation("修改员工")
+    public Result update(@RequestBody EmployeeDTO employeeDTO) {
+        log.info(employeeDTO.toString());
+        employeeService.update(employeeDTO);
+        return Result.success();
+    }
+
+    /**
+     * 启用/禁用员工账户
+     */
+    @PostMapping("/status/{status}")
+    @ApiOperation("启用/禁用员工账户")
+    public Result updateStatus(@PathVariable Integer status, @RequestParam Long id) {
+        employeeService.updateStatus(status,id);
+        return Result.success();
+    }
 }

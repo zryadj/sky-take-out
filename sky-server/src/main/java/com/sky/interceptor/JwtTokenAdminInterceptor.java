@@ -2,9 +2,12 @@ package com.sky.interceptor;
 
 import com.sky.constant.JwtClaimsConstant;
 import com.sky.context.BaseContext;
+import com.sky.entity.Employee;
 import com.sky.properties.JwtProperties;
+import com.sky.service.impl.EmployeeServiceImpl;
 import com.sky.utils.JwtUtil;
 import io.jsonwebtoken.Claims;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -18,11 +21,13 @@ import javax.servlet.http.HttpServletResponse;
  * jwt令牌校验的拦截器
  */
 @Component
+@RequiredArgsConstructor
 @Slf4j
 public class JwtTokenAdminInterceptor implements HandlerInterceptor {
 
-    @Autowired
-    private JwtProperties jwtProperties;
+
+    private final JwtProperties jwtProperties;
+    private final EmployeeServiceImpl employeeServiceImpl;
 
     /**
      * 校验jwt
@@ -49,6 +54,11 @@ public class JwtTokenAdminInterceptor implements HandlerInterceptor {
             Claims claims = JwtUtil.parseJWT(jwtProperties.getAdminSecretKey(), token);
             Long empId = Long.valueOf(claims.get(JwtClaimsConstant.EMP_ID).toString());
             log.info("当前员工id：", empId);
+            //判断是否被禁用 TODO 数据库吃不消，后期考虑改redis
+            Employee employee = employeeServiceImpl.queryByOne(empId);
+            if (employee.getStatus() == 0) {
+                throw new RuntimeException("账号已经被禁用");
+            }
             BaseContext.setCurrentId(empId);
             //3、通过，放行
             return true;
