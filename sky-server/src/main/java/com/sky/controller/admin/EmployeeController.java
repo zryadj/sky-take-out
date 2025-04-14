@@ -3,8 +3,10 @@ package com.sky.controller.admin;
 import com.sky.constant.JwtClaimsConstant;
 import com.sky.dto.EmployeeDTO;
 import com.sky.dto.EmployeeLoginDTO;
+import com.sky.dto.EmployeePageQueryDTO;
 import com.sky.entity.Employee;
 import com.sky.properties.JwtProperties;
+import com.sky.result.PageResult;
 import com.sky.result.Result;
 import com.sky.service.EmployeeService;
 import com.sky.utils.JwtUtil;
@@ -14,6 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -84,9 +87,25 @@ public class EmployeeController {
     /**
      * 查询员工
      */
-    @GetMapping
+    @GetMapping("/page")
     @ApiOperation("查询员工")
-    public Result<EmployeeLoginDTO> page(@RequestParam Integer page, @RequestParam Integer pagesize) {
-        return null;
+    public Result<PageResult> page(EmployeePageQueryDTO pageQueryDTO) {
+        log.info(pageQueryDTO.toString());
+        PageResult pageResult = employeeService.pageQuery(pageQueryDTO);
+        return Result.success(pageResult);
     }
+
+    /**
+     * 查询一个员工
+     */
+    @GetMapping("/{id}")
+    @ApiOperation("查询一个员工")
+    public Result<Employee> query(@PathVariable Long id) {
+        return Result.success( employeeService.queryByOne(id));
+    }
+//    /**
+//     * 修改员工
+//     */
+//    @GetMapping
+//    @ApiOperation("修改员工")
 }
