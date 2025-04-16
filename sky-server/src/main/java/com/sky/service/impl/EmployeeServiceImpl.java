@@ -75,11 +75,11 @@ public class EmployeeServiceImpl implements EmployeeService {
      */
     @Override
     public void add(EmployeeDTO employeeDTO) {
-//        //先确认是否存在唯一的
-//        Employee emp = employeeMapper.getByUsername(employeeDTO.getUsername());
-//        if (emp != null) {
-//            throw new RuntimeException("已存在用户名！！");
-//        }
+        //先确认是否存在唯一的
+        Employee emp = employeeMapper.getByUsername(employeeDTO.getUsername());
+        if (emp != null) {
+            throw new RuntimeException("已存在用户名！！");
+        }
 
         Employee employee = new Employee();
         //拷贝属性
@@ -90,13 +90,13 @@ public class EmployeeServiceImpl implements EmployeeService {
         employee.setPassword(DigestUtils.md5DigestAsHex(PasswordConstant.DEFAULT_PASSWORD.getBytes()));
 
         //创建时间 修改时间
-        employee.setCreateTime(LocalDateTime.now());
-        employee.setUpdateTime(LocalDateTime.now());
+//        employee.setCreateTime(LocalDateTime.now());
+//        employee.setUpdateTime(LocalDateTime.now());
 
         //设置修改人 创建人
         //TODO 修改人
-        employee.setCreateUser(BaseContext.getCurrentId());
-        employee.setUpdateUser(BaseContext.getCurrentId());
+//        employee.setCreateUser(BaseContext.getCurrentId());
+//        employee.setUpdateUser(BaseContext.getCurrentId());
 
         employeeMapper.insert(employee);
     }
@@ -134,7 +134,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public void updateStatus(Integer status, Long id) {
         Employee employee = Employee.builder().id(id).status(status)
-                .updateUser(BaseContext.getCurrentId()).updateTime(LocalDateTime.now()).build();
+//                .updateUser(BaseContext.getCurrentId()).updateTime(LocalDateTime.now())
+                .build();
         employeeMapper.update(employee);
     }
 
@@ -149,8 +150,8 @@ public class EmployeeServiceImpl implements EmployeeService {
         //查询用户是否被禁用
         Employee employee = new Employee();
         BeanUtils.copyProperties(employeeDTO, employee);
-        employee.setUpdateUser(BaseContext.getCurrentId());
-        employee.setUpdateTime(LocalDateTime.now());
+//        employee.setUpdateUser(BaseContext.getCurrentId());
+//        employee.setUpdateTime(LocalDateTime.now());
         employeeMapper.update(employee);
     }
 

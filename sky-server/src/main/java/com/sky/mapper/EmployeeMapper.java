@@ -1,8 +1,10 @@
 package com.sky.mapper;
 
 import com.github.pagehelper.Page;
+import com.sky.annotation.AutoFill;
 import com.sky.dto.EmployeePageQueryDTO;
 import com.sky.entity.Employee;
+import com.sky.enumeration.OperationType;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -30,6 +32,7 @@ public interface EmployeeMapper {
             "create_user,update_user) values (#{name},#{username}," +
             "#{password},#{phone},#{sex},#{idNumber},#{createTime}," +
             "#{updateTime},#{createUser},#{updateUser})")
+    @AutoFill(OperationType.INSERT)
     void insert(Employee employee);
 
     /**
@@ -45,6 +48,6 @@ public interface EmployeeMapper {
 
 
 
-
+    @AutoFill(OperationType.UPDATE)
     void update(Employee employee);
 }
