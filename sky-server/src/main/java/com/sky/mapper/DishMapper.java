@@ -8,6 +8,8 @@ import com.sky.enumeration.OperationType;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
+import java.util.List;
+
 @Mapper
 public interface DishMapper {
 
@@ -29,4 +31,19 @@ public interface DishMapper {
     void add(Dish dish);
 
     Page<Dish> query(DishPageQueryDTO dishQuery);
+
+    List<Dish> selectByList(List<Long> ids);
+
+    void deleteBatch(List<Long> ids);
+
+    Dish queryByOne(Long id);
+
+    /**
+     * 修改菜品
+     *
+     * @param dish
+     */
+    @AutoFill(OperationType.UPDATE)
+    void update(Dish dish);
+
 }
