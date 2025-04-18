@@ -90,3 +90,24 @@ ACID 是数据库事务的四大特性，保证数据的可靠性和一致性：
 # 主从同步
 
 ![image-20250330100424462](mysql相关.assets/image-20250330100424462.png)
+
+1.binlog 2.从库线程写到中继日志3.sql线程写到从库
+
+# 分库分表
+
+![image-20250418175132181](mysql相关.assets/image-20250418175132181.png)
+
+![image-20250418175311488](mysql相关.assets/image-20250418175311488.png)
+
+![image-20250418175453321](mysql相关.assets/image-20250418175453321.png)
+
+![image-20250418175626867](mysql相关.assets/image-20250418175626867.png)
+
+![image-20250418200451033](mysql相关.assets/image-20250418200451033.png)
+
+![image-20250418200827254](mysql相关.assets/image-20250418200827254.png)
+
+![image-20250418201003030](mysql相关.assets/image-20250418201003030.png)
+
+![image-20250418201129702](mysql相关.assets/image-20250418201129702.png)
+

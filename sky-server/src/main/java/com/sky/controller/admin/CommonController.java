@@ -13,7 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 @RestController
 @RequestMapping("/admin/common")
 @AllArgsConstructor
-@Api("文件接口")
+@Api(tags = "文件接口")
 public class CommonController {
     private final MinioUtil minioUtil;
 
