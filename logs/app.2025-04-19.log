@@ -1,0 +1,1159 @@
+2025-04-19 00:10:41.930 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.12 on 192.168.0.100 with PID 53807 (/Users/zry/Desktop/sky-out/sky-server/target/classes started by zry in /Users/zry/Desktop/sky-out)
+2025-04-19 00:10:41.933 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-04-19 00:10:43.256 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-19 00:10:43.259 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-19 00:10:43.294 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2025-04-19 00:10:44.580 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 00:10:44.593 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 00:10:44.593 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 00:10:44.593 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-04-19 00:10:44.736 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 00:10:44.736 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2742 ms
+2025-04-19 00:10:44.919 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-19 00:10:45.076 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-19 00:10:45.397 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-04-19 00:10:45.669 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-04-19 00:10:46.723 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 00:10:46.742 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 00:10:47.076 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 5.887 seconds (JVM running for 6.952)
+2025-04-19 00:10:47.079 [traceId=] [main] INFO  com.sky.SkyApplication - server started
+2025-04-19 00:10:57.394 [traceId=] [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-19 00:10:57.394 [traceId=] [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-19 00:10:57.397 [traceId=] [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-04-19 00:10:57.435 [traceId=cbd12929900c406a8d08604dec3fc097] [http-nio-8080-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /ws/etd7vwmm88
+2025-04-19 00:10:57.435 [traceId=e6862cba99f949edbe9f545bcc9a94b6] [http-nio-8080-exec-3] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/shop/status
+2025-04-19 00:10:58.158 [traceId=f42971f98fff426eae83b753da299aa1] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 00:10:58.194 [traceId=f42971f98fff426eae83b753da299aa1] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 00:10:58.232 [traceId=f42971f98fff426eae83b753da299aa1] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 00:10:58.248 [traceId=f42971f98fff426eae83b753da299aa1] [http-nio-8080-exec-2] INFO  c.s.c.admin.EmployeeController - EmployeePageQueryDTO(name=null, page=1, pageSize=10)
+2025-04-19 00:10:58.320 [traceId=f42971f98fff426eae83b753da299aa1] [http-nio-8080-exec-2] DEBUG c.s.m.EmployeeMapper.pageQuery_COUNT - ==>  Preparing: SELECT count(0) FROM employee
+2025-04-19 00:10:58.320 [traceId=f42971f98fff426eae83b753da299aa1] [http-nio-8080-exec-2] DEBUG c.s.m.EmployeeMapper.pageQuery_COUNT - ==> Parameters: 
+2025-04-19 00:10:58.323 [traceId=f42971f98fff426eae83b753da299aa1] [http-nio-8080-exec-2] DEBUG c.s.m.EmployeeMapper.pageQuery_COUNT - <==      Total: 1
+2025-04-19 00:10:58.326 [traceId=f42971f98fff426eae83b753da299aa1] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.pageQuery - ==>  Preparing: select id, name, username, password, phone ,sex ,id_number as idNumber, status, create_time as createTime , update_time as updateTime, create_user as createUser, update_user as updateUser from employee order by create_time desc LIMIT ?
+2025-04-19 00:10:58.327 [traceId=f42971f98fff426eae83b753da299aa1] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.pageQuery - ==> Parameters: 10(Integer)
+2025-04-19 00:10:58.330 [traceId=f42971f98fff426eae83b753da299aa1] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.pageQuery - <==      Total: 4
+2025-04-19 00:10:59.045 [traceId=4873f2bf8e7e44c49c760a2424a343f6] [http-nio-8080-exec-5] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 00:10:59.046 [traceId=4873f2bf8e7e44c49c760a2424a343f6] [http-nio-8080-exec-5] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 00:10:59.049 [traceId=4873f2bf8e7e44c49c760a2424a343f6] [http-nio-8080-exec-5] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 00:10:59.054 [traceId=4873f2bf8e7e44c49c760a2424a343f6] [http-nio-8080-exec-5] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - ==>  Preparing: SELECT count(0) FROM category
+2025-04-19 00:10:59.055 [traceId=4873f2bf8e7e44c49c760a2424a343f6] [http-nio-8080-exec-5] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - ==> Parameters: 
+2025-04-19 00:10:59.058 [traceId=4873f2bf8e7e44c49c760a2424a343f6] [http-nio-8080-exec-5] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - <==      Total: 1
+2025-04-19 00:10:59.058 [traceId=4873f2bf8e7e44c49c760a2424a343f6] [http-nio-8080-exec-5] DEBUG c.s.mapper.CategoryMapper.pageQuery - ==>  Preparing: select * from category order by sort asc , create_time desc LIMIT ?
+2025-04-19 00:10:59.059 [traceId=4873f2bf8e7e44c49c760a2424a343f6] [http-nio-8080-exec-5] DEBUG c.s.mapper.CategoryMapper.pageQuery - ==> Parameters: 10(Integer)
+2025-04-19 00:10:59.067 [traceId=4873f2bf8e7e44c49c760a2424a343f6] [http-nio-8080-exec-5] DEBUG c.s.mapper.CategoryMapper.pageQuery - <==      Total: 10
+2025-04-19 00:11:00.188 [traceId=58f0d5d95ff24992883f18f8af8aa778] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 00:11:00.189 [traceId=58f0d5d95ff24992883f18f8af8aa778] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 00:11:00.190 [traceId=58f0d5d95ff24992883f18f8af8aa778] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 00:11:00.191 [traceId=58f0d5d95ff24992883f18f8af8aa778] [http-nio-8080-exec-6] INFO  c.s.c.admin.EmployeeController - EmployeePageQueryDTO(name=null, page=1, pageSize=10)
+2025-04-19 00:11:00.193 [traceId=58f0d5d95ff24992883f18f8af8aa778] [http-nio-8080-exec-6] DEBUG c.s.m.EmployeeMapper.pageQuery_COUNT - ==>  Preparing: SELECT count(0) FROM employee
+2025-04-19 00:11:00.194 [traceId=58f0d5d95ff24992883f18f8af8aa778] [http-nio-8080-exec-6] DEBUG c.s.m.EmployeeMapper.pageQuery_COUNT - ==> Parameters: 
+2025-04-19 00:11:00.194 [traceId=58f0d5d95ff24992883f18f8af8aa778] [http-nio-8080-exec-6] DEBUG c.s.m.EmployeeMapper.pageQuery_COUNT - <==      Total: 1
+2025-04-19 00:11:00.195 [traceId=58f0d5d95ff24992883f18f8af8aa778] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.pageQuery - ==>  Preparing: select id, name, username, password, phone ,sex ,id_number as idNumber, status, create_time as createTime , update_time as updateTime, create_user as createUser, update_user as updateUser from employee order by create_time desc LIMIT ?
+2025-04-19 00:11:00.195 [traceId=58f0d5d95ff24992883f18f8af8aa778] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.pageQuery - ==> Parameters: 10(Integer)
+2025-04-19 00:11:00.197 [traceId=58f0d5d95ff24992883f18f8af8aa778] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.pageQuery - <==      Total: 4
+2025-04-19 00:11:01.931 [traceId=68ee6dc778a341499b0fa28edd738416] [http-nio-8080-exec-7] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 00:11:01.932 [traceId=68ee6dc778a341499b0fa28edd738416] [http-nio-8080-exec-7] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 00:11:01.935 [traceId=68ee6dc778a341499b0fa28edd738416] [http-nio-8080-exec-7] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 00:11:01.935 [traceId=1f58c3badb434ab5947cc7d13849f10c] [http-nio-8080-exec-8] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 00:11:01.935 [traceId=1f58c3badb434ab5947cc7d13849f10c] [http-nio-8080-exec-8] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 00:11:01.937 [traceId=1f58c3badb434ab5947cc7d13849f10c] [http-nio-8080-exec-8] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 00:11:01.939 [traceId=1f58c3badb434ab5947cc7d13849f10c] [http-nio-8080-exec-8] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category where status = 1 and type = ? order by sort asc,create_time desc
+2025-04-19 00:11:01.939 [traceId=1f58c3badb434ab5947cc7d13849f10c] [http-nio-8080-exec-8] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 1(Integer)
+2025-04-19 00:11:01.946 [traceId=1f58c3badb434ab5947cc7d13849f10c] [http-nio-8080-exec-8] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 8
+2025-04-19 00:11:01.948 [traceId=68ee6dc778a341499b0fa28edd738416] [http-nio-8080-exec-7] DEBUG c.sky.mapper.DishMapper.query_COUNT - ==>  Preparing: SELECT count(0) FROM dish
+2025-04-19 00:11:01.948 [traceId=68ee6dc778a341499b0fa28edd738416] [http-nio-8080-exec-7] DEBUG c.sky.mapper.DishMapper.query_COUNT - ==> Parameters: 
+2025-04-19 00:11:01.952 [traceId=68ee6dc778a341499b0fa28edd738416] [http-nio-8080-exec-7] DEBUG c.sky.mapper.DishMapper.query_COUNT - <==      Total: 1
+2025-04-19 00:11:01.953 [traceId=68ee6dc778a341499b0fa28edd738416] [http-nio-8080-exec-7] DEBUG com.sky.mapper.DishMapper.query - ==>  Preparing: select id, name, category_id, price, image, description, status, create_time, update_time, create_user, update_user from dish order by create_time desc LIMIT ?
+2025-04-19 00:11:01.953 [traceId=68ee6dc778a341499b0fa28edd738416] [http-nio-8080-exec-7] DEBUG com.sky.mapper.DishMapper.query - ==> Parameters: 10(Integer)
+2025-04-19 00:11:01.958 [traceId=68ee6dc778a341499b0fa28edd738416] [http-nio-8080-exec-7] DEBUG com.sky.mapper.DishMapper.query - <==      Total: 10
+2025-04-19 02:29:49.136 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-19 02:29:49.145 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-19 02:29:55.505 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.12 on 192.168.0.100 with PID 59941 (/Users/zry/Desktop/sky-out/sky-server/target/classes started by zry in /Users/zry/Desktop/sky-out)
+2025-04-19 02:29:55.507 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-04-19 02:29:57.204 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-19 02:29:57.208 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-19 02:29:57.257 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2025-04-19 02:29:58.522 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 02:29:58.548 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 02:29:58.549 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 02:29:58.550 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-04-19 02:29:58.762 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 02:29:58.763 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3160 ms
+2025-04-19 02:29:58.966 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-19 02:29:59.400 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-19 02:29:59.838 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-04-19 02:30:00.526 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-04-19 02:30:02.145 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 02:30:02.211 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 02:30:02.901 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 8.957 seconds (JVM running for 11.082)
+2025-04-19 02:30:02.904 [traceId=] [main] INFO  com.sky.SkyApplication - server started
+2025-04-19 02:30:27.457 [traceId=] [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-19 02:30:27.458 [traceId=] [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-19 02:30:27.460 [traceId=] [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-19 02:30:27.485 [traceId=b60d9e82f1024d87b85a99d8673b255f] [http-nio-8080-exec-3] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /ws/1agms1yrhuc
+2025-04-19 02:30:27.485 [traceId=0017d50fb6d5463cb3ad270a0e539a7d] [http-nio-8080-exec-2] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/shop/status
+2025-04-19 02:30:28.648 [traceId=c8af1a1a18f947dca55237c2aa784f00] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:30:28.648 [traceId=1ff8aa72bc7c45a2a5bb28cf48a35218] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:30:28.683 [traceId=1ff8aa72bc7c45a2a5bb28cf48a35218] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:30:28.683 [traceId=c8af1a1a18f947dca55237c2aa784f00] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:30:28.728 [traceId=1ff8aa72bc7c45a2a5bb28cf48a35218] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:30:28.728 [traceId=c8af1a1a18f947dca55237c2aa784f00] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:30:28.801 [traceId=c8af1a1a18f947dca55237c2aa784f00] [http-nio-8080-exec-1] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category where status = 1 and type = ? order by sort asc,create_time desc
+2025-04-19 02:30:28.804 [traceId=c8af1a1a18f947dca55237c2aa784f00] [http-nio-8080-exec-1] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 1(Integer)
+2025-04-19 02:30:28.830 [traceId=c8af1a1a18f947dca55237c2aa784f00] [http-nio-8080-exec-1] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 8
+2025-04-19 02:30:28.932 [traceId=1ff8aa72bc7c45a2a5bb28cf48a35218] [http-nio-8080-exec-4] DEBUG c.sky.mapper.DishMapper.query_COUNT - ==>  Preparing: SELECT count(0) FROM dish
+2025-04-19 02:30:28.933 [traceId=1ff8aa72bc7c45a2a5bb28cf48a35218] [http-nio-8080-exec-4] DEBUG c.sky.mapper.DishMapper.query_COUNT - ==> Parameters: 
+2025-04-19 02:30:28.941 [traceId=1ff8aa72bc7c45a2a5bb28cf48a35218] [http-nio-8080-exec-4] DEBUG c.sky.mapper.DishMapper.query_COUNT - <==      Total: 1
+2025-04-19 02:30:28.946 [traceId=1ff8aa72bc7c45a2a5bb28cf48a35218] [http-nio-8080-exec-4] DEBUG com.sky.mapper.DishMapper.query - ==>  Preparing: select id, name, category_id, price, image, description, status, create_time, update_time, create_user, update_user from dish order by create_time desc LIMIT ?
+2025-04-19 02:30:28.947 [traceId=1ff8aa72bc7c45a2a5bb28cf48a35218] [http-nio-8080-exec-4] DEBUG com.sky.mapper.DishMapper.query - ==> Parameters: 10(Integer)
+2025-04-19 02:30:28.955 [traceId=1ff8aa72bc7c45a2a5bb28cf48a35218] [http-nio-8080-exec-4] DEBUG com.sky.mapper.DishMapper.query - <==      Total: 10
+2025-04-19 02:30:33.216 [traceId=522d5637145642129df82d7d25965f1e] [http-nio-8080-exec-7] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/setmeal/page
+2025-04-19 02:30:33.217 [traceId=b83e5d277c0a46ffb68d9527c91888a0] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:30:33.218 [traceId=b83e5d277c0a46ffb68d9527c91888a0] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:30:33.223 [traceId=b83e5d277c0a46ffb68d9527c91888a0] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:30:33.224 [traceId=b83e5d277c0a46ffb68d9527c91888a0] [http-nio-8080-exec-6] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category where status = 1 and type = ? order by sort asc,create_time desc
+2025-04-19 02:30:33.224 [traceId=b83e5d277c0a46ffb68d9527c91888a0] [http-nio-8080-exec-6] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 2(Integer)
+2025-04-19 02:30:33.227 [traceId=b83e5d277c0a46ffb68d9527c91888a0] [http-nio-8080-exec-6] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 2
+2025-04-19 02:30:38.759 [traceId=5e9825110a424f768b25aeecd0f333a5] [http-nio-8080-exec-8] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:30:38.760 [traceId=5e9825110a424f768b25aeecd0f333a5] [http-nio-8080-exec-8] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:30:38.762 [traceId=5e9825110a424f768b25aeecd0f333a5] [http-nio-8080-exec-8] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:30:38.763 [traceId=5e9825110a424f768b25aeecd0f333a5] [http-nio-8080-exec-8] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category where status = 1 and type = ? order by sort asc,create_time desc
+2025-04-19 02:30:38.765 [traceId=5e9825110a424f768b25aeecd0f333a5] [http-nio-8080-exec-8] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 2(Integer)
+2025-04-19 02:30:38.774 [traceId=5e9825110a424f768b25aeecd0f333a5] [http-nio-8080-exec-8] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 2
+2025-04-19 02:30:41.361 [traceId=73d68e1df4334279bbc133502df0971e] [http-nio-8080-exec-9] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/setmeal/page
+2025-04-19 02:30:41.362 [traceId=dc012bbb821a466e93eb6596fce54985] [http-nio-8080-exec-10] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:30:41.363 [traceId=dc012bbb821a466e93eb6596fce54985] [http-nio-8080-exec-10] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:30:41.365 [traceId=dc012bbb821a466e93eb6596fce54985] [http-nio-8080-exec-10] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:30:41.366 [traceId=dc012bbb821a466e93eb6596fce54985] [http-nio-8080-exec-10] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category where status = 1 and type = ? order by sort asc,create_time desc
+2025-04-19 02:30:41.367 [traceId=dc012bbb821a466e93eb6596fce54985] [http-nio-8080-exec-10] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 2(Integer)
+2025-04-19 02:30:41.368 [traceId=dc012bbb821a466e93eb6596fce54985] [http-nio-8080-exec-10] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 2
+2025-04-19 02:30:42.689 [traceId=32961233ad9d4b17b94a02a364fe1d24] [http-nio-8080-exec-3] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/order/conditionSearch
+2025-04-19 02:30:44.574 [traceId=b668ea1a32da49309fe6debcd32e8879] [http-nio-8080-exec-2] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/report/turnoverStatistics
+2025-04-19 02:30:44.577 [traceId=d3139c248e264c8a9bec7bd343d9bdcb] [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/report/userStatistics
+2025-04-19 02:30:44.578 [traceId=2639b5776d5b436c8c232b1fd983fd54] [http-nio-8080-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/report/ordersStatistics
+2025-04-19 02:30:44.579 [traceId=73a3e6f9905d4273b47da3882bc5e617] [http-nio-8080-exec-4] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/report/top10
+2025-04-19 02:30:45.721 [traceId=24953b90e92346ecab72311914e910e4] [http-nio-8080-exec-6] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/workspace/businessData
+2025-04-19 02:30:45.721 [traceId=0e81930fb0724498ab163646669343bf] [http-nio-8080-exec-8] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewOrders
+2025-04-19 02:30:45.721 [traceId=cbecde5efefa4beb984b8f23518a596a] [http-nio-8080-exec-9] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewDishes
+2025-04-19 02:30:45.722 [traceId=b6d2b5208a5b42a4b6828f88d1243c2e] [http-nio-8080-exec-10] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewSetmeals
+2025-04-19 02:30:45.721 [traceId=0531501ce8c745e596926d2fa4a09d08] [http-nio-8080-exec-7] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/order/conditionSearch
+2025-04-19 02:31:03.155 [traceId=1f1179776a0640ad963afd0112bfe262] [http-nio-8080-exec-3] WARN  o.s.web.servlet.PageNotFound - No mapping for PUT /admin/shop/0
+2025-04-19 02:39:25.892 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-19 02:39:25.911 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-19 02:39:31.233 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.12 on 192.168.0.100 with PID 62699 (/Users/zry/Desktop/sky-out/sky-server/target/classes started by zry in /Users/zry/Desktop/sky-out)
+2025-04-19 02:39:31.235 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-04-19 02:39:33.053 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-19 02:39:33.063 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-19 02:39:33.129 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2025-04-19 02:39:34.733 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 02:39:34.751 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 02:39:34.752 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 02:39:34.753 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-04-19 02:39:34.951 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 02:39:34.951 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3578 ms
+2025-04-19 02:39:35.143 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-19 02:39:35.369 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-19 02:39:35.725 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-04-19 02:39:36.720 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-04-19 02:39:37.674 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 02:39:37.700 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 02:39:38.259 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 7.979 seconds (JVM running for 9.057)
+2025-04-19 02:39:38.266 [traceId=] [main] INFO  com.sky.SkyApplication - server started
+2025-04-19 02:39:40.333 [traceId=] [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-19 02:39:40.333 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-19 02:39:40.335 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-04-19 02:39:40.352 [traceId=d20d1a7185bf4e0aa5cf585bc677ec23] [http-nio-8080-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping for PUT /admin/shop/0
+2025-04-19 02:40:10.812 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-19 02:40:10.813 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-19 02:40:15.452 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.12 on 192.168.0.100 with PID 62732 (/Users/zry/Desktop/sky-out/sky-server/target/classes started by zry in /Users/zry/Desktop/sky-out)
+2025-04-19 02:40:15.455 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-04-19 02:40:16.694 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-19 02:40:16.699 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-19 02:40:16.738 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2025-04-19 02:40:17.867 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 02:40:17.881 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 02:40:17.881 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 02:40:17.881 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-04-19 02:40:18.056 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 02:40:18.057 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2542 ms
+2025-04-19 02:40:18.373 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-19 02:40:18.540 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-19 02:40:19.035 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-04-19 02:40:19.807 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-04-19 02:40:20.949 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 02:40:20.977 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 02:40:21.540 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 6.979 seconds (JVM running for 7.974)
+2025-04-19 02:40:21.544 [traceId=] [main] INFO  com.sky.SkyApplication - server started
+2025-04-19 02:40:22.661 [traceId=] [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-19 02:40:22.661 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-19 02:40:22.664 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-04-19 02:40:22.802 [traceId=a39ea95202b14cd3ae8ea2ab35e73001] [http-nio-8080-exec-2] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/setmeal/page
+2025-04-19 02:40:23.704 [traceId=88d6da781b134421909d8f22052df3d8] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:40:23.745 [traceId=88d6da781b134421909d8f22052df3d8] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:40:23.792 [traceId=88d6da781b134421909d8f22052df3d8] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:40:23.826 [traceId=88d6da781b134421909d8f22052df3d8] [http-nio-8080-exec-1] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category where status = 1 and type = ? order by sort asc,create_time desc
+2025-04-19 02:40:23.827 [traceId=88d6da781b134421909d8f22052df3d8] [http-nio-8080-exec-1] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 2(Integer)
+2025-04-19 02:40:23.834 [traceId=88d6da781b134421909d8f22052df3d8] [http-nio-8080-exec-1] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 2
+2025-04-19 02:40:35.404 [traceId=bf68751f92a443528d5a9235d5629b63] [http-nio-8080-exec-3] WARN  o.s.web.servlet.PageNotFound - No mapping for PUT /admin/shop/0
+2025-04-19 02:40:55.527 [traceId=1c1e5504eee14bd39b9d9e06683c0d4d] [http-nio-8080-exec-4] WARN  o.s.web.servlet.PageNotFound - No mapping for PUT /admin/shop/0
+2025-04-19 02:41:53.596 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-19 02:41:53.608 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-19 02:41:58.033 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.12 on 192.168.0.100 with PID 62825 (/Users/zry/Desktop/sky-out/sky-server/target/classes started by zry in /Users/zry/Desktop/sky-out)
+2025-04-19 02:41:58.035 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-04-19 02:41:59.163 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-19 02:41:59.168 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-19 02:41:59.205 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2025-04-19 02:42:00.344 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 02:42:00.357 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 02:42:00.357 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 02:42:00.358 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-04-19 02:42:00.525 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 02:42:00.526 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2430 ms
+2025-04-19 02:42:00.751 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-19 02:42:00.935 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-19 02:42:01.270 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-04-19 02:42:02.008 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-04-19 02:42:02.931 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 02:42:02.957 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 02:42:03.393 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 6.094 seconds (JVM running for 7.018)
+2025-04-19 02:42:03.396 [traceId=] [main] INFO  com.sky.SkyApplication - server started
+2025-04-19 02:42:10.241 [traceId=] [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-19 02:42:10.242 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-19 02:42:10.243 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-19 02:42:10.949 [traceId=670a27ad1ec54591a56cc910bfc55338] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:42:10.999 [traceId=670a27ad1ec54591a56cc910bfc55338] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:42:11.064 [traceId=670a27ad1ec54591a56cc910bfc55338] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:42:11.096 [traceId=670a27ad1ec54591a56cc910bfc55338] [http-nio-8080-exec-1] INFO  c.s.controller.admin.ShopController - 0
+2025-04-19 02:45:01.299 [traceId=f9311b04a3d140f3a07dbab948541ad0] [http-nio-8080-exec-4] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewSetmeals
+2025-04-19 02:45:01.299 [traceId=3ca9a5a3cfdd4210909f2382fe7e2c91] [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewOrders
+2025-04-19 02:45:01.299 [traceId=ba534c651e0f42c28c7fb4492d02e74e] [http-nio-8080-exec-3] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/order/conditionSearch
+2025-04-19 02:45:01.299 [traceId=642f39cc3beb406fb7d109b439fcb910] [http-nio-8080-exec-6] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewDishes
+2025-04-19 02:45:01.299 [traceId=43a84779a6a44ea285e424e5f5fa9dad] [http-nio-8080-exec-2] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/workspace/businessData
+2025-04-19 02:45:14.030 [traceId=20ae62f0360342628f6380a57aaa1010] [http-nio-8080-exec-7] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 182989
+2025-04-19 02:45:14.050 [traceId=20ae62f0360342628f6380a57aaa1010] [http-nio-8080-exec-7] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:45:14.051 [traceId=20ae62f0360342628f6380a57aaa1010] [http-nio-8080-exec-7] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:45:14.060 [traceId=20ae62f0360342628f6380a57aaa1010] [http-nio-8080-exec-7] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:45:14.154 [traceId=20ae62f0360342628f6380a57aaa1010] [http-nio-8080-exec-7] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - ==>  Preparing: SELECT count(0) FROM category
+2025-04-19 02:45:14.154 [traceId=20ae62f0360342628f6380a57aaa1010] [http-nio-8080-exec-7] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - ==> Parameters: 
+2025-04-19 02:45:14.160 [traceId=20ae62f0360342628f6380a57aaa1010] [http-nio-8080-exec-7] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - <==      Total: 1
+2025-04-19 02:45:14.162 [traceId=20ae62f0360342628f6380a57aaa1010] [http-nio-8080-exec-7] DEBUG c.s.mapper.CategoryMapper.pageQuery - ==>  Preparing: select * from category order by sort asc , create_time desc LIMIT ?
+2025-04-19 02:45:14.163 [traceId=20ae62f0360342628f6380a57aaa1010] [http-nio-8080-exec-7] DEBUG c.s.mapper.CategoryMapper.pageQuery - ==> Parameters: 10(Integer)
+2025-04-19 02:45:14.168 [traceId=20ae62f0360342628f6380a57aaa1010] [http-nio-8080-exec-7] DEBUG c.s.mapper.CategoryMapper.pageQuery - <==      Total: 10
+2025-04-19 02:45:24.771 [traceId=9199bc0add5b40d2809365fd4ea6ef00] [http-nio-8080-exec-8] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:45:24.772 [traceId=9199bc0add5b40d2809365fd4ea6ef00] [http-nio-8080-exec-8] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:45:24.776 [traceId=9199bc0add5b40d2809365fd4ea6ef00] [http-nio-8080-exec-8] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:45:24.777 [traceId=9199bc0add5b40d2809365fd4ea6ef00] [http-nio-8080-exec-8] INFO  c.s.controller.admin.ShopController - 1
+2025-04-19 02:45:25.827 [traceId=dd39ed82b2fc418588b69da1b1705c24] [http-nio-8080-exec-9] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:45:25.828 [traceId=dd39ed82b2fc418588b69da1b1705c24] [http-nio-8080-exec-9] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:45:25.831 [traceId=dd39ed82b2fc418588b69da1b1705c24] [http-nio-8080-exec-9] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:45:25.834 [traceId=dd39ed82b2fc418588b69da1b1705c24] [http-nio-8080-exec-9] INFO  c.s.controller.admin.ShopController - 1
+2025-04-19 02:45:37.867 [traceId=5fbf7ecdc61f4ba1aec0ba5be752ca29] [http-nio-8080-exec-10] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /ws/te7i4at490k
+2025-04-19 02:45:38.002 [traceId=2212cc71c5a44eaf9df986792b8fd6b8] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:45:38.004 [traceId=2212cc71c5a44eaf9df986792b8fd6b8] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:45:38.018 [traceId=2212cc71c5a44eaf9df986792b8fd6b8] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:45:38.023 [traceId=2212cc71c5a44eaf9df986792b8fd6b8] [http-nio-8080-exec-1] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - ==>  Preparing: SELECT count(0) FROM category
+2025-04-19 02:45:38.025 [traceId=2212cc71c5a44eaf9df986792b8fd6b8] [http-nio-8080-exec-1] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - ==> Parameters: 
+2025-04-19 02:45:38.028 [traceId=2212cc71c5a44eaf9df986792b8fd6b8] [http-nio-8080-exec-1] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - <==      Total: 1
+2025-04-19 02:45:38.028 [traceId=2212cc71c5a44eaf9df986792b8fd6b8] [http-nio-8080-exec-1] DEBUG c.s.mapper.CategoryMapper.pageQuery - ==>  Preparing: select * from category order by sort asc , create_time desc LIMIT ?
+2025-04-19 02:45:38.029 [traceId=2212cc71c5a44eaf9df986792b8fd6b8] [http-nio-8080-exec-1] DEBUG c.s.mapper.CategoryMapper.pageQuery - ==> Parameters: 10(Integer)
+2025-04-19 02:45:38.032 [traceId=bed0efa7f5f44ae4ac81960acd5b2205] [http-nio-8080-exec-5] ERROR c.sky.handler.GlobalExceptionHandler - 系统异常：traceId=bed0efa7f5f44ae4ac81960acd5b2205, url=/admin/shop/status, error=Request method 'GET' not supported
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:253)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:442)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:383)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:125)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:67)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1264)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1046)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.sky.config.TraceIdFilter.doFilter(TraceIdFilter.java:25)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-04-19 02:45:38.054 [traceId=2212cc71c5a44eaf9df986792b8fd6b8] [http-nio-8080-exec-1] DEBUG c.s.mapper.CategoryMapper.pageQuery - <==      Total: 10
+2025-04-19 02:48:44.134 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-19 02:48:44.139 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-19 02:48:49.144 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.12 on 192.168.0.100 with PID 63172 (/Users/zry/Desktop/sky-out/sky-server/target/classes started by zry in /Users/zry/Desktop/sky-out)
+2025-04-19 02:48:49.146 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-04-19 02:48:50.424 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-19 02:48:50.431 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-19 02:48:50.475 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2025-04-19 02:48:51.650 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 02:48:51.665 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 02:48:51.666 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 02:48:51.666 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-04-19 02:48:51.850 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 02:48:51.850 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2639 ms
+2025-04-19 02:48:52.052 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-19 02:48:52.237 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-19 02:48:52.627 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-04-19 02:48:53.375 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-04-19 02:48:54.247 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 02:48:54.272 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 02:48:54.725 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 6.37 seconds (JVM running for 7.339)
+2025-04-19 02:48:54.729 [traceId=] [main] INFO  com.sky.SkyApplication - server started
+2025-04-19 02:49:24.991 [traceId=] [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-19 02:49:24.992 [traceId=] [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-19 02:49:24.995 [traceId=] [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-04-19 02:49:25.032 [traceId=277d13127de44ecf99160e16906d82bc] [http-nio-8080-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /ws/zppnod1hbnb
+2025-04-19 02:49:26.193 [traceId=a1d7bad9beec4614a6a642cdc27ce2a2] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:49:26.193 [traceId=fac7757a27ba4eae98f289375a220c5b] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:49:26.237 [traceId=a1d7bad9beec4614a6a642cdc27ce2a2] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:49:26.237 [traceId=fac7757a27ba4eae98f289375a220c5b] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:49:26.288 [traceId=fac7757a27ba4eae98f289375a220c5b] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:49:26.288 [traceId=a1d7bad9beec4614a6a642cdc27ce2a2] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:49:26.386 [traceId=fac7757a27ba4eae98f289375a220c5b] [http-nio-8080-exec-2] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - ==>  Preparing: SELECT count(0) FROM category
+2025-04-19 02:49:26.386 [traceId=fac7757a27ba4eae98f289375a220c5b] [http-nio-8080-exec-2] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - ==> Parameters: 
+2025-04-19 02:49:26.392 [traceId=fac7757a27ba4eae98f289375a220c5b] [http-nio-8080-exec-2] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - <==      Total: 1
+2025-04-19 02:49:26.394 [traceId=fac7757a27ba4eae98f289375a220c5b] [http-nio-8080-exec-2] DEBUG c.s.mapper.CategoryMapper.pageQuery - ==>  Preparing: select * from category order by sort asc , create_time desc LIMIT ?
+2025-04-19 02:49:26.395 [traceId=fac7757a27ba4eae98f289375a220c5b] [http-nio-8080-exec-2] DEBUG c.s.mapper.CategoryMapper.pageQuery - ==> Parameters: 10(Integer)
+2025-04-19 02:49:26.402 [traceId=fac7757a27ba4eae98f289375a220c5b] [http-nio-8080-exec-2] DEBUG c.s.mapper.CategoryMapper.pageQuery - <==      Total: 10
+2025-04-19 02:49:55.887 [traceId=9e6d6e4c12eb43728a74b2d757e65333] [http-nio-8080-exec-5] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:49:55.890 [traceId=9e6d6e4c12eb43728a74b2d757e65333] [http-nio-8080-exec-5] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:49:55.894 [traceId=9e6d6e4c12eb43728a74b2d757e65333] [http-nio-8080-exec-5] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:49:55.927 [traceId=85729d0e320d43d895e264ca1ce3d3a5] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:49:55.928 [traceId=85729d0e320d43d895e264ca1ce3d3a5] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:49:55.930 [traceId=85729d0e320d43d895e264ca1ce3d3a5] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:50:08.328 [traceId=9ec56bacca9a4a40bc85a46aa212abe8] [http-nio-8080-exec-7] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /ws/b6q99jorq2o
+2025-04-19 02:50:08.433 [traceId=3a2241dd5dfb4285ac2b69744d03cab0] [http-nio-8080-exec-9] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:50:08.434 [traceId=3a2241dd5dfb4285ac2b69744d03cab0] [http-nio-8080-exec-9] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:50:08.447 [traceId=3a2241dd5dfb4285ac2b69744d03cab0] [http-nio-8080-exec-9] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:50:08.449 [traceId=3a2241dd5dfb4285ac2b69744d03cab0] [http-nio-8080-exec-9] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - ==>  Preparing: SELECT count(0) FROM category
+2025-04-19 02:50:08.450 [traceId=3a2241dd5dfb4285ac2b69744d03cab0] [http-nio-8080-exec-9] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - ==> Parameters: 
+2025-04-19 02:50:08.453 [traceId=3a2241dd5dfb4285ac2b69744d03cab0] [http-nio-8080-exec-9] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - <==      Total: 1
+2025-04-19 02:50:08.454 [traceId=3a2241dd5dfb4285ac2b69744d03cab0] [http-nio-8080-exec-9] DEBUG c.s.mapper.CategoryMapper.pageQuery - ==>  Preparing: select * from category order by sort asc , create_time desc LIMIT ?
+2025-04-19 02:50:08.454 [traceId=3a2241dd5dfb4285ac2b69744d03cab0] [http-nio-8080-exec-9] DEBUG c.s.mapper.CategoryMapper.pageQuery - ==> Parameters: 10(Integer)
+2025-04-19 02:50:08.565 [traceId=3a2241dd5dfb4285ac2b69744d03cab0] [http-nio-8080-exec-9] DEBUG c.s.mapper.CategoryMapper.pageQuery - <==      Total: 10
+2025-04-19 02:50:08.585 [traceId=962ca68c41364bc9ab05646d0e931ac9] [http-nio-8080-exec-10] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:50:08.586 [traceId=962ca68c41364bc9ab05646d0e931ac9] [http-nio-8080-exec-10] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:50:08.588 [traceId=962ca68c41364bc9ab05646d0e931ac9] [http-nio-8080-exec-10] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:50:14.851 [traceId=568624f650924480b8cd67315e16f7c5] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:50:14.851 [traceId=568624f650924480b8cd67315e16f7c5] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:50:14.854 [traceId=568624f650924480b8cd67315e16f7c5] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:50:14.878 [traceId=a4d1e8a7ba5d44749b3867b1fb00eecc] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:50:14.881 [traceId=a4d1e8a7ba5d44749b3867b1fb00eecc] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:50:14.886 [traceId=a4d1e8a7ba5d44749b3867b1fb00eecc] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:50:18.145 [traceId=d86b11e1796a483592ba4aaf1999a053] [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /ws/h1tqejeagke
+2025-04-19 02:50:18.147 [traceId=03aa8467cbe640e69aa835eea5f82954] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:50:18.147 [traceId=984d830ce7a74810a2c355eb9766eb80] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:50:18.147 [traceId=03aa8467cbe640e69aa835eea5f82954] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:50:18.147 [traceId=984d830ce7a74810a2c355eb9766eb80] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:50:18.149 [traceId=984d830ce7a74810a2c355eb9766eb80] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:50:18.152 [traceId=03aa8467cbe640e69aa835eea5f82954] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:50:18.153 [traceId=984d830ce7a74810a2c355eb9766eb80] [http-nio-8080-exec-2] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - ==>  Preparing: SELECT count(0) FROM category
+2025-04-19 02:50:18.154 [traceId=984d830ce7a74810a2c355eb9766eb80] [http-nio-8080-exec-2] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - ==> Parameters: 
+2025-04-19 02:50:18.159 [traceId=984d830ce7a74810a2c355eb9766eb80] [http-nio-8080-exec-2] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - <==      Total: 1
+2025-04-19 02:50:18.160 [traceId=984d830ce7a74810a2c355eb9766eb80] [http-nio-8080-exec-2] DEBUG c.s.mapper.CategoryMapper.pageQuery - ==>  Preparing: select * from category order by sort asc , create_time desc LIMIT ?
+2025-04-19 02:50:18.162 [traceId=984d830ce7a74810a2c355eb9766eb80] [http-nio-8080-exec-2] DEBUG c.s.mapper.CategoryMapper.pageQuery - ==> Parameters: 10(Integer)
+2025-04-19 02:50:18.169 [traceId=984d830ce7a74810a2c355eb9766eb80] [http-nio-8080-exec-2] DEBUG c.s.mapper.CategoryMapper.pageQuery - <==      Total: 10
+2025-04-19 02:50:29.329 [traceId=67aed7b9653e47aa9e6857634ecbc6cb] [http-nio-8080-exec-7] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:50:29.330 [traceId=67aed7b9653e47aa9e6857634ecbc6cb] [http-nio-8080-exec-7] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:50:29.334 [traceId=67aed7b9653e47aa9e6857634ecbc6cb] [http-nio-8080-exec-7] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:50:29.347 [traceId=b14714fe515743d39c1680c9b82ee2b8] [http-nio-8080-exec-8] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:50:29.348 [traceId=b14714fe515743d39c1680c9b82ee2b8] [http-nio-8080-exec-8] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:50:29.365 [traceId=b14714fe515743d39c1680c9b82ee2b8] [http-nio-8080-exec-8] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:50:37.153 [traceId=76c4ce4220b64464b9bb5de57defebc8] [http-nio-8080-exec-9] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /ws/rpmane7ulo
+2025-04-19 02:50:37.187 [traceId=4f9c9fc5f5974be6ab1084dc6582868b] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:50:37.187 [traceId=4f9c9fc5f5974be6ab1084dc6582868b] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:50:37.191 [traceId=4f9c9fc5f5974be6ab1084dc6582868b] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:50:37.196 [traceId=4f9c9fc5f5974be6ab1084dc6582868b] [http-nio-8080-exec-1] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - ==>  Preparing: SELECT count(0) FROM category
+2025-04-19 02:50:37.196 [traceId=4f9c9fc5f5974be6ab1084dc6582868b] [http-nio-8080-exec-1] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - ==> Parameters: 
+2025-04-19 02:50:37.198 [traceId=4f9c9fc5f5974be6ab1084dc6582868b] [http-nio-8080-exec-1] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - <==      Total: 1
+2025-04-19 02:50:37.198 [traceId=4f9c9fc5f5974be6ab1084dc6582868b] [http-nio-8080-exec-1] DEBUG c.s.mapper.CategoryMapper.pageQuery - ==>  Preparing: select * from category order by sort asc , create_time desc LIMIT ?
+2025-04-19 02:50:37.199 [traceId=4f9c9fc5f5974be6ab1084dc6582868b] [http-nio-8080-exec-1] DEBUG c.s.mapper.CategoryMapper.pageQuery - ==> Parameters: 10(Integer)
+2025-04-19 02:50:37.202 [traceId=4f9c9fc5f5974be6ab1084dc6582868b] [http-nio-8080-exec-1] DEBUG c.s.mapper.CategoryMapper.pageQuery - <==      Total: 10
+2025-04-19 02:50:37.220 [traceId=71f763db5bbd4de8a517db25ab04d078] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:50:37.221 [traceId=71f763db5bbd4de8a517db25ab04d078] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:50:37.230 [traceId=71f763db5bbd4de8a517db25ab04d078] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:54:08.649 [traceId=99fca9c37d3a445d8901074d7b2fb1e5] [http-nio-8080-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 211331
+2025-04-19 02:54:08.651 [traceId=99fca9c37d3a445d8901074d7b2fb1e5] [http-nio-8080-exec-5] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 230502
+2025-04-19 02:54:08.670 [traceId=99fca9c37d3a445d8901074d7b2fb1e5] [http-nio-8080-exec-5] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:54:08.670 [traceId=99fca9c37d3a445d8901074d7b2fb1e5] [http-nio-8080-exec-5] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:54:08.676 [traceId=99fca9c37d3a445d8901074d7b2fb1e5] [http-nio-8080-exec-5] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:54:08.691 [traceId=398938ba6e614ac4b08ad6847508eb80] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:54:08.692 [traceId=398938ba6e614ac4b08ad6847508eb80] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:54:08.703 [traceId=398938ba6e614ac4b08ad6847508eb80] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:55:50.645 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-19 02:55:50.649 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-19 02:55:56.495 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.12 on 192.168.0.100 with PID 63611 (/Users/zry/Desktop/sky-out/sky-server/target/classes started by zry in /Users/zry/Desktop/sky-out)
+2025-04-19 02:55:56.496 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-04-19 02:55:57.712 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-19 02:55:57.716 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-19 02:55:57.765 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2025-04-19 02:55:58.911 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 02:55:58.924 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 02:55:58.925 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 02:55:58.925 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-04-19 02:55:59.105 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 02:55:59.106 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2549 ms
+2025-04-19 02:55:59.335 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-19 02:55:59.504 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-19 02:55:59.854 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-04-19 02:56:00.591 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-04-19 02:56:01.537 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 02:56:01.563 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 02:56:02.030 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 6.29 seconds (JVM running for 7.709)
+2025-04-19 02:56:02.033 [traceId=] [main] INFO  com.sky.SkyApplication - server started
+2025-04-19 02:57:42.477 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-19 02:57:42.479 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-19 02:57:47.225 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.12 on 192.168.0.100 with PID 63715 (/Users/zry/Desktop/sky-out/sky-server/target/classes started by zry in /Users/zry/Desktop/sky-out)
+2025-04-19 02:57:47.226 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-04-19 02:57:48.275 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-19 02:57:48.278 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-19 02:57:48.318 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2025-04-19 02:57:49.318 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 02:57:49.329 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 02:57:49.330 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 02:57:49.330 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-04-19 02:57:49.497 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 02:57:49.497 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2205 ms
+2025-04-19 02:57:49.694 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-19 02:57:49.842 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-19 02:57:50.161 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-04-19 02:57:50.800 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-04-19 02:57:51.657 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 02:57:51.682 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 02:57:52.179 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 5.645 seconds (JVM running for 6.61)
+2025-04-19 02:57:52.182 [traceId=] [main] INFO  com.sky.SkyApplication - server started
+2025-04-19 02:58:01.478 [traceId=] [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-19 02:58:01.479 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-19 02:58:01.480 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-19 02:58:02.083 [traceId=7b6a474af46c481cb3b1334c052f14ac] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:58:02.118 [traceId=7b6a474af46c481cb3b1334c052f14ac] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:58:02.164 [traceId=7b6a474af46c481cb3b1334c052f14ac] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:58:02.719 [traceId=cf54d3e28bfe411d89ab6ebc157d5120] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:58:02.720 [traceId=cf54d3e28bfe411d89ab6ebc157d5120] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:58:02.722 [traceId=cf54d3e28bfe411d89ab6ebc157d5120] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:58:06.518 [traceId=87fca224039946558276760b486144bf] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:58:06.518 [traceId=87fca224039946558276760b486144bf] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:58:06.523 [traceId=87fca224039946558276760b486144bf] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:58:06.540 [traceId=938d9491400645dca631c3d5fc4cb64c] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:58:06.541 [traceId=938d9491400645dca631c3d5fc4cb64c] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:58:06.543 [traceId=938d9491400645dca631c3d5fc4cb64c] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:58:09.692 [traceId=84d8ec7050454c50a48a32f268329c9b] [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/order/conditionSearch
+2025-04-19 02:58:09.692 [traceId=f8aaee85947649aca6f15bda7e8d4f47] [http-nio-8080-exec-7] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/workspace/businessData
+2025-04-19 02:58:09.692 [traceId=a8c1aded7b6647d6980afd8afe190edc] [http-nio-8080-exec-8] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewOrders
+2025-04-19 02:58:09.692 [traceId=bdf334fe5a02427b9256f8116f5a5e35] [http-nio-8080-exec-6] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewDishes
+2025-04-19 02:58:09.699 [traceId=f6600ab0a5b248a7a8b66276b89baff4] [http-nio-8080-exec-9] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewSetmeals
+2025-04-19 02:58:10.640 [traceId=49a91c6f98d842f88c4696ebe880b850] [http-nio-8080-exec-10] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/report/turnoverStatistics
+2025-04-19 02:58:10.643 [traceId=0b4b6bfa166841949f257e7c551de86b] [http-nio-8080-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/report/userStatistics
+2025-04-19 02:58:10.644 [traceId=22d7ad442754450a8c791f95647c2385] [http-nio-8080-exec-2] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/report/ordersStatistics
+2025-04-19 02:58:10.647 [traceId=ba92a44acd94455091c02f19e38bcb0c] [http-nio-8080-exec-3] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/report/top10
+2025-04-19 02:58:16.994 [traceId=46e6f6a3cfca42429201bf3fae5a163f] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:58:16.994 [traceId=46e6f6a3cfca42429201bf3fae5a163f] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:58:17.056 [traceId=46e6f6a3cfca42429201bf3fae5a163f] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:58:17.074 [traceId=2b5d81f0b08747edb01bb2f087cba305] [http-nio-8080-exec-9] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:58:17.075 [traceId=2b5d81f0b08747edb01bb2f087cba305] [http-nio-8080-exec-9] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:58:17.077 [traceId=2b5d81f0b08747edb01bb2f087cba305] [http-nio-8080-exec-9] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:58:19.160 [traceId=a5dcf923ad664c129bdda67d52819e25] [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/setmeal/page
+2025-04-19 02:58:19.161 [traceId=d4cee8e108d04cc5aba293f8102f6faf] [http-nio-8080-exec-7] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 02:58:19.162 [traceId=d4cee8e108d04cc5aba293f8102f6faf] [http-nio-8080-exec-7] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 02:58:19.169 [traceId=d4cee8e108d04cc5aba293f8102f6faf] [http-nio-8080-exec-7] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 02:58:19.227 [traceId=d4cee8e108d04cc5aba293f8102f6faf] [http-nio-8080-exec-7] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category where status = 1 and type = ? order by sort asc,create_time desc
+2025-04-19 02:58:19.228 [traceId=d4cee8e108d04cc5aba293f8102f6faf] [http-nio-8080-exec-7] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 2(Integer)
+2025-04-19 02:58:19.236 [traceId=d4cee8e108d04cc5aba293f8102f6faf] [http-nio-8080-exec-7] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 2
+2025-04-19 03:10:02.907 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-19 03:10:02.930 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-19 03:10:07.493 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.12 on 192.168.0.100 with PID 64154 (/Users/zry/Desktop/sky-out/sky-server/target/classes started by zry in /Users/zry/Desktop/sky-out)
+2025-04-19 03:10:07.495 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-04-19 03:10:08.638 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-19 03:10:08.643 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-19 03:10:08.682 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2025-04-19 03:10:09.841 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 03:10:09.855 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 03:10:09.855 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 03:10:09.856 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-04-19 03:10:10.017 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 03:10:10.017 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2464 ms
+2025-04-19 03:10:10.216 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-19 03:10:10.382 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-19 03:10:10.743 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-04-19 03:10:11.440 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-04-19 03:10:12.303 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 03:10:12.328 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 03:10:12.731 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 5.974 seconds (JVM running for 6.935)
+2025-04-19 03:10:12.734 [traceId=] [main] INFO  com.sky.SkyApplication - server started
+2025-04-19 03:10:25.775 [traceId=] [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-19 03:10:25.776 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-19 03:10:25.777 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-19 03:10:26.413 [traceId=5eac2e8b31914475bf49a0a82e67165e] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:10:26.443 [traceId=5eac2e8b31914475bf49a0a82e67165e] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:10:26.484 [traceId=5eac2e8b31914475bf49a0a82e67165e] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:10:27.080 [traceId=167587aeef3246d7a83b1d0fcbed3327] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:10:27.081 [traceId=167587aeef3246d7a83b1d0fcbed3327] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:10:27.085 [traceId=167587aeef3246d7a83b1d0fcbed3327] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:11:19.168 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-19 03:11:19.177 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-19 03:11:24.036 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.12 on 192.168.0.100 with PID 64217 (/Users/zry/Desktop/sky-out/sky-server/target/classes started by zry in /Users/zry/Desktop/sky-out)
+2025-04-19 03:11:24.039 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-04-19 03:11:25.786 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-19 03:11:25.792 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-19 03:11:25.828 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2025-04-19 03:11:27.149 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 03:11:27.165 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 03:11:27.165 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 03:11:27.165 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-04-19 03:11:27.333 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 03:11:27.333 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3220 ms
+2025-04-19 03:11:27.533 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-19 03:11:27.708 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-19 03:11:28.064 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-04-19 03:11:28.850 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-04-19 03:11:29.764 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 03:11:29.793 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 03:11:30.287 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 7.09 seconds (JVM running for 8.158)
+2025-04-19 03:11:30.291 [traceId=] [main] INFO  com.sky.SkyApplication - server started
+2025-04-19 03:11:41.749 [traceId=] [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-19 03:11:41.750 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-19 03:11:41.751 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-19 03:11:42.486 [traceId=1debcf8f070c47e4ae23aa446526c5e6] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:11:42.521 [traceId=1debcf8f070c47e4ae23aa446526c5e6] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:11:42.560 [traceId=1debcf8f070c47e4ae23aa446526c5e6] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:11:42.703 [traceId=1debcf8f070c47e4ae23aa446526c5e6] [http-nio-8080-exec-1] ERROR c.sky.handler.GlobalExceptionHandler - 系统异常：traceId=1debcf8f070c47e4ae23aa446526c5e6, url=/admin/shop/1, error=class java.lang.Integer cannot be cast to class java.lang.String (java.lang.Integer and java.lang.String are in module java.base of loader 'bootstrap')
+java.lang.ClassCastException: class java.lang.Integer cannot be cast to class java.lang.String (java.lang.Integer and java.lang.String are in module java.base of loader 'bootstrap')
+	at org.springframework.data.redis.serializer.StringRedisSerializer.serialize(StringRedisSerializer.java:36)
+	at org.springframework.data.redis.core.AbstractOperations.rawValue(AbstractOperations.java:128)
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:304)
+	at com.sky.controller.admin.ShopController.status(ShopController.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.sky.config.TraceIdFilter.doFilter(TraceIdFilter.java:25)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-04-19 03:15:48.627 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-19 03:15:48.642 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-19 03:15:53.414 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.12 on 192.168.0.100 with PID 64443 (/Users/zry/Desktop/sky-out/sky-server/target/classes started by zry in /Users/zry/Desktop/sky-out)
+2025-04-19 03:15:53.415 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-04-19 03:15:54.882 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-19 03:15:54.890 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-19 03:15:54.946 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2025-04-19 03:15:56.197 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 03:15:56.215 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 03:15:56.216 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 03:15:56.218 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-04-19 03:15:56.394 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 03:15:56.395 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2924 ms
+2025-04-19 03:15:56.615 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-19 03:15:56.780 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-19 03:15:57.203 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-04-19 03:15:57.992 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-04-19 03:15:58.848 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 03:15:58.905 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 03:15:59.357 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 6.724 seconds (JVM running for 7.739)
+2025-04-19 03:15:59.360 [traceId=] [main] INFO  com.sky.SkyApplication - server started
+2025-04-19 03:16:14.477 [traceId=] [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-19 03:16:14.478 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-19 03:16:14.480 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-04-19 03:16:15.298 [traceId=5f095499c2f0491ea47b479013049e8d] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:16:15.331 [traceId=5f095499c2f0491ea47b479013049e8d] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:16:15.371 [traceId=5f095499c2f0491ea47b479013049e8d] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:16:15.410 [traceId=5f095499c2f0491ea47b479013049e8d] [http-nio-8080-exec-1] ERROR c.sky.handler.GlobalExceptionHandler - 系统异常：traceId=5f095499c2f0491ea47b479013049e8d, url=/admin/shop/0, error=class java.lang.Integer cannot be cast to class java.lang.String (java.lang.Integer and java.lang.String are in module java.base of loader 'bootstrap')
+java.lang.ClassCastException: class java.lang.Integer cannot be cast to class java.lang.String (java.lang.Integer and java.lang.String are in module java.base of loader 'bootstrap')
+	at org.springframework.data.redis.serializer.StringRedisSerializer.serialize(StringRedisSerializer.java:36)
+	at org.springframework.data.redis.core.AbstractOperations.rawValue(AbstractOperations.java:128)
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:304)
+	at com.sky.controller.admin.ShopController.status(ShopController.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.sky.config.TraceIdFilter.doFilter(TraceIdFilter.java:25)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-04-19 03:16:15.990 [traceId=bed729e3800e41e6b58b641fe5c6964c] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:16:15.991 [traceId=bed729e3800e41e6b58b641fe5c6964c] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:16:15.994 [traceId=bed729e3800e41e6b58b641fe5c6964c] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:16:15.995 [traceId=bed729e3800e41e6b58b641fe5c6964c] [http-nio-8080-exec-2] ERROR c.sky.handler.GlobalExceptionHandler - 系统异常：traceId=bed729e3800e41e6b58b641fe5c6964c, url=/admin/shop/1, error=class java.lang.Integer cannot be cast to class java.lang.String (java.lang.Integer and java.lang.String are in module java.base of loader 'bootstrap')
+java.lang.ClassCastException: class java.lang.Integer cannot be cast to class java.lang.String (java.lang.Integer and java.lang.String are in module java.base of loader 'bootstrap')
+	at org.springframework.data.redis.serializer.StringRedisSerializer.serialize(StringRedisSerializer.java:36)
+	at org.springframework.data.redis.core.AbstractOperations.rawValue(AbstractOperations.java:128)
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:304)
+	at com.sky.controller.admin.ShopController.status(ShopController.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.sky.config.TraceIdFilter.doFilter(TraceIdFilter.java:25)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-04-19 03:18:25.211 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-19 03:18:25.223 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-19 03:18:30.207 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.12 on 192.168.0.100 with PID 64580 (/Users/zry/Desktop/sky-out/sky-server/target/classes started by zry in /Users/zry/Desktop/sky-out)
+2025-04-19 03:18:30.209 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-04-19 03:18:31.456 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-19 03:18:31.462 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-19 03:18:31.505 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2025-04-19 03:18:32.838 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 03:18:32.856 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 03:18:32.857 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 03:18:32.857 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-04-19 03:18:33.081 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 03:18:33.098 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2830 ms
+2025-04-19 03:18:33.316 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-19 03:18:33.505 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-19 03:18:33.889 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-04-19 03:18:34.644 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-04-19 03:18:35.612 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 03:18:35.636 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 03:18:36.162 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 6.744 seconds (JVM running for 7.699)
+2025-04-19 03:18:36.165 [traceId=] [main] INFO  com.sky.SkyApplication - server started
+2025-04-19 03:18:59.579 [traceId=] [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-19 03:18:59.580 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-19 03:18:59.583 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-04-19 03:19:00.355 [traceId=1c5749bf321149c69d762940bbf60d2b] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:19:00.392 [traceId=1c5749bf321149c69d762940bbf60d2b] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:19:00.437 [traceId=1c5749bf321149c69d762940bbf60d2b] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:19:00.488 [traceId=1c5749bf321149c69d762940bbf60d2b] [http-nio-8080-exec-1] ERROR c.sky.handler.GlobalExceptionHandler - 系统异常：traceId=1c5749bf321149c69d762940bbf60d2b, url=/admin/shop/0, error=class java.lang.Integer cannot be cast to class java.lang.String (java.lang.Integer and java.lang.String are in module java.base of loader 'bootstrap')
+java.lang.ClassCastException: class java.lang.Integer cannot be cast to class java.lang.String (java.lang.Integer and java.lang.String are in module java.base of loader 'bootstrap')
+	at org.springframework.data.redis.serializer.StringRedisSerializer.serialize(StringRedisSerializer.java:36)
+	at org.springframework.data.redis.core.AbstractOperations.rawValue(AbstractOperations.java:128)
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:304)
+	at com.sky.controller.admin.ShopController.status(ShopController.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.sky.config.TraceIdFilter.doFilter(TraceIdFilter.java:25)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-04-19 03:20:14.590 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-19 03:20:14.596 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-19 03:20:18.992 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.12 on 192.168.0.100 with PID 64663 (/Users/zry/Desktop/sky-out/sky-server/target/classes started by zry in /Users/zry/Desktop/sky-out)
+2025-04-19 03:20:18.994 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-04-19 03:20:20.367 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-19 03:20:20.371 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-19 03:20:20.405 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2025-04-19 03:20:21.764 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 03:20:21.778 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 03:20:21.779 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 03:20:21.779 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-04-19 03:20:21.965 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 03:20:21.966 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2907 ms
+2025-04-19 03:20:22.194 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-19 03:20:22.343 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-19 03:20:22.703 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-04-19 03:20:23.352 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-04-19 03:20:24.184 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 03:20:24.209 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 03:20:24.691 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 6.409 seconds (JVM running for 7.35)
+2025-04-19 03:20:24.701 [traceId=] [main] INFO  com.sky.SkyApplication - server started
+2025-04-19 03:20:34.933 [traceId=] [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-19 03:20:34.933 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-19 03:20:34.935 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-04-19 03:20:35.672 [traceId=4a0f9d76ec6d4769a4955e9d74fa74a6] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:20:35.703 [traceId=4a0f9d76ec6d4769a4955e9d74fa74a6] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:20:35.738 [traceId=4a0f9d76ec6d4769a4955e9d74fa74a6] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:20:36.401 [traceId=83e235e386dd49298485849a94fc1387] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:20:36.404 [traceId=83e235e386dd49298485849a94fc1387] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:20:36.414 [traceId=83e235e386dd49298485849a94fc1387] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:21:36.477 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-19 03:21:36.484 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-19 03:21:40.751 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.12 on 192.168.0.100 with PID 64727 (/Users/zry/Desktop/sky-out/sky-server/target/classes started by zry in /Users/zry/Desktop/sky-out)
+2025-04-19 03:21:40.752 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-04-19 03:21:41.964 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-19 03:21:41.970 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-19 03:21:42.016 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2025-04-19 03:21:43.134 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 03:21:43.149 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 03:21:43.150 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 03:21:43.150 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-04-19 03:21:43.302 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 03:21:43.302 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2494 ms
+2025-04-19 03:21:43.489 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-19 03:21:43.657 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-19 03:21:44.004 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-04-19 03:21:44.716 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-04-19 03:21:45.736 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 03:21:45.802 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 03:21:46.312 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 6.273 seconds (JVM running for 7.175)
+2025-04-19 03:21:46.316 [traceId=] [main] INFO  com.sky.SkyApplication - server started
+2025-04-19 03:21:56.587 [traceId=] [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-19 03:21:56.588 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-19 03:21:56.590 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-04-19 03:21:57.258 [traceId=100d7ba5326b404ab31f44e1fbb985bb] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:21:57.290 [traceId=100d7ba5326b404ab31f44e1fbb985bb] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:21:57.341 [traceId=100d7ba5326b404ab31f44e1fbb985bb] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:21:57.883 [traceId=2da2a3d62c8b4f9c865da857952ef2c9] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:21:57.883 [traceId=2da2a3d62c8b4f9c865da857952ef2c9] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:21:57.888 [traceId=2da2a3d62c8b4f9c865da857952ef2c9] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:22:09.802 [traceId=e9869e9ec217416d956128297d0bc746] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:22:09.802 [traceId=e9869e9ec217416d956128297d0bc746] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:22:09.804 [traceId=e9869e9ec217416d956128297d0bc746] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:22:09.906 [traceId=73ad4e33a135417a8eccbd5716859781] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:22:09.908 [traceId=73ad4e33a135417a8eccbd5716859781] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:22:09.912 [traceId=73ad4e33a135417a8eccbd5716859781] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:22:42.710 [traceId=5dfad414e1e24a2d8a51afe0cea2f7d1] [http-nio-8080-exec-5] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:22:42.711 [traceId=5dfad414e1e24a2d8a51afe0cea2f7d1] [http-nio-8080-exec-5] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:22:42.713 [traceId=5dfad414e1e24a2d8a51afe0cea2f7d1] [http-nio-8080-exec-5] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:22:42.734 [traceId=476dbe6f1b3c45858addd9f00ef91a75] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:22:42.735 [traceId=476dbe6f1b3c45858addd9f00ef91a75] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:22:42.745 [traceId=476dbe6f1b3c45858addd9f00ef91a75] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:22:46.781 [traceId=dfdf32eda8d84226bf1a17adf55dd54d] [http-nio-8080-exec-9] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:22:46.781 [traceId=7ab5f0cbd8a54342895afb47114a77e7] [http-nio-8080-exec-7] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/setmeal/page
+2025-04-19 03:22:46.781 [traceId=eca38f2d8bdd4b388266a7f1980a80c9] [http-nio-8080-exec-8] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /ws/by9uo9579n7
+2025-04-19 03:22:46.782 [traceId=dfdf32eda8d84226bf1a17adf55dd54d] [http-nio-8080-exec-9] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:22:46.786 [traceId=dfdf32eda8d84226bf1a17adf55dd54d] [http-nio-8080-exec-9] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:22:46.787 [traceId=9fc0ac1b9e4c4b2fb6a81526ef2ab3a6] [http-nio-8080-exec-10] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:22:46.787 [traceId=9fc0ac1b9e4c4b2fb6a81526ef2ab3a6] [http-nio-8080-exec-10] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:22:46.794 [traceId=9fc0ac1b9e4c4b2fb6a81526ef2ab3a6] [http-nio-8080-exec-10] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:22:46.839 [traceId=dfdf32eda8d84226bf1a17adf55dd54d] [http-nio-8080-exec-9] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category where status = 1 and type = ? order by sort asc,create_time desc
+2025-04-19 03:22:46.840 [traceId=dfdf32eda8d84226bf1a17adf55dd54d] [http-nio-8080-exec-9] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 2(Integer)
+2025-04-19 03:22:46.852 [traceId=dfdf32eda8d84226bf1a17adf55dd54d] [http-nio-8080-exec-9] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 2
+2025-04-19 03:22:58.632 [traceId=8e318abfaabb482dad78f340f978cc9c] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:22:58.632 [traceId=8e318abfaabb482dad78f340f978cc9c] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:22:58.639 [traceId=8e318abfaabb482dad78f340f978cc9c] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:22:58.673 [traceId=6e8a35bd1ff64c5fa08cb3b0b94a0776] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:22:58.675 [traceId=6e8a35bd1ff64c5fa08cb3b0b94a0776] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:22:58.682 [traceId=6e8a35bd1ff64c5fa08cb3b0b94a0776] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:23:03.448 [traceId=3055d7d6205a4419b6fe2c23a89cbad8] [http-nio-8080-exec-4] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /ws/9qkklujndki
+2025-04-19 03:23:03.609 [traceId=deeafb0385384a528a89b425219839d0] [http-nio-8080-exec-10] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:23:03.613 [traceId=deeafb0385384a528a89b425219839d0] [http-nio-8080-exec-10] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:23:03.614 [traceId=e9b9327468d54b19b188fab8d0c1294e] [http-nio-8080-exec-7] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:23:03.614 [traceId=e9b9327468d54b19b188fab8d0c1294e] [http-nio-8080-exec-7] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:23:03.610 [traceId=0e386086b36c4c05840bdf0b6d4ee785] [http-nio-8080-exec-6] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/setmeal/page
+2025-04-19 03:23:03.621 [traceId=deeafb0385384a528a89b425219839d0] [http-nio-8080-exec-10] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:23:03.622 [traceId=e9b9327468d54b19b188fab8d0c1294e] [http-nio-8080-exec-7] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:23:03.623 [traceId=deeafb0385384a528a89b425219839d0] [http-nio-8080-exec-10] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category where status = 1 and type = ? order by sort asc,create_time desc
+2025-04-19 03:23:03.637 [traceId=deeafb0385384a528a89b425219839d0] [http-nio-8080-exec-10] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 2(Integer)
+2025-04-19 03:23:03.676 [traceId=deeafb0385384a528a89b425219839d0] [http-nio-8080-exec-10] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 2
+2025-04-19 03:23:46.828 [traceId=88ab0949400949879704be38da87825a] [http-nio-8080-exec-8] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:23:46.828 [traceId=88ab0949400949879704be38da87825a] [http-nio-8080-exec-8] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:23:46.830 [traceId=88ab0949400949879704be38da87825a] [http-nio-8080-exec-8] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:23:46.843 [traceId=20690e128dfa4313833ac89d66d7eda8] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:23:46.845 [traceId=20690e128dfa4313833ac89d66d7eda8] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:23:46.848 [traceId=20690e128dfa4313833ac89d66d7eda8] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:24:27.591 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-19 03:24:27.599 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-19 03:24:32.095 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.12 on 192.168.0.100 with PID 64860 (/Users/zry/Desktop/sky-out/sky-server/target/classes started by zry in /Users/zry/Desktop/sky-out)
+2025-04-19 03:24:32.096 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-04-19 03:24:33.223 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-19 03:24:33.228 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-19 03:24:33.269 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2025-04-19 03:24:34.504 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 03:24:34.523 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 03:24:34.524 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 03:24:34.524 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-04-19 03:24:34.693 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 03:24:34.693 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2539 ms
+2025-04-19 03:24:34.885 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-19 03:24:35.050 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-19 03:24:35.389 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-04-19 03:24:36.091 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-04-19 03:24:36.988 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 03:24:37.012 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 03:24:37.421 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 6.013 seconds (JVM running for 6.95)
+2025-04-19 03:24:37.424 [traceId=] [main] INFO  com.sky.SkyApplication - server started
+2025-04-19 03:24:47.862 [traceId=] [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-19 03:24:47.863 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-19 03:24:47.865 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-04-19 03:24:48.595 [traceId=5255fabf50734d08be8986b8fdab665a] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:24:48.625 [traceId=5255fabf50734d08be8986b8fdab665a] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:24:48.661 [traceId=5255fabf50734d08be8986b8fdab665a] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:24:48.696 [traceId=5255fabf50734d08be8986b8fdab665a] [http-nio-8080-exec-1] ERROR c.sky.handler.GlobalExceptionHandler - 系统异常：traceId=5255fabf50734d08be8986b8fdab665a, url=/admin/shop/1, error=class java.lang.Integer cannot be cast to class java.lang.String (java.lang.Integer and java.lang.String are in module java.base of loader 'bootstrap')
+java.lang.ClassCastException: class java.lang.Integer cannot be cast to class java.lang.String (java.lang.Integer and java.lang.String are in module java.base of loader 'bootstrap')
+	at org.springframework.data.redis.serializer.StringRedisSerializer.serialize(StringRedisSerializer.java:36)
+	at org.springframework.data.redis.core.AbstractOperations.rawValue(AbstractOperations.java:128)
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:304)
+	at com.sky.controller.admin.ShopController.status(ShopController.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.sky.config.TraceIdFilter.doFilter(TraceIdFilter.java:25)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-04-19 03:25:32.678 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-19 03:25:32.687 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-19 03:25:37.279 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.12 on 192.168.0.100 with PID 64934 (/Users/zry/Desktop/sky-out/sky-server/target/classes started by zry in /Users/zry/Desktop/sky-out)
+2025-04-19 03:25:37.281 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-04-19 03:25:38.418 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-19 03:25:38.422 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-19 03:25:38.458 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2025-04-19 03:25:39.686 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 03:25:39.698 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 03:25:39.699 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 03:25:39.699 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-04-19 03:25:39.879 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 03:25:39.879 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2538 ms
+2025-04-19 03:25:40.048 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-19 03:25:40.221 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-19 03:25:40.555 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-04-19 03:25:41.289 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-04-19 03:25:42.222 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 03:25:42.247 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 03:25:42.692 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 6.204 seconds (JVM running for 7.126)
+2025-04-19 03:25:42.696 [traceId=] [main] INFO  com.sky.SkyApplication - server started
+2025-04-19 03:25:45.550 [traceId=] [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-19 03:25:45.550 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-19 03:25:45.554 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-04-19 03:25:46.214 [traceId=c216c7c4d84148d29500cd872a5ee91d] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:25:46.245 [traceId=c216c7c4d84148d29500cd872a5ee91d] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:25:46.287 [traceId=c216c7c4d84148d29500cd872a5ee91d] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:25:46.846 [traceId=e0e8c193c5b544daace880cd713312ef] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:25:46.846 [traceId=e0e8c193c5b544daace880cd713312ef] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:25:46.852 [traceId=e0e8c193c5b544daace880cd713312ef] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:25:54.679 [traceId=0c26e818eb3f447fa1f22f5a1d646d19] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:25:54.680 [traceId=0c26e818eb3f447fa1f22f5a1d646d19] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:25:54.684 [traceId=0c26e818eb3f447fa1f22f5a1d646d19] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:25:54.714 [traceId=ffbfba5965aa4997882a5f2f449d28db] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:25:54.714 [traceId=ffbfba5965aa4997882a5f2f449d28db] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:25:54.718 [traceId=ffbfba5965aa4997882a5f2f449d28db] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:26:03.514 [traceId=28c2f1cc1c314c6281f19a0fa3d9c7e5] [http-nio-8080-exec-5] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:26:03.516 [traceId=28c2f1cc1c314c6281f19a0fa3d9c7e5] [http-nio-8080-exec-5] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:26:03.519 [traceId=28c2f1cc1c314c6281f19a0fa3d9c7e5] [http-nio-8080-exec-5] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 03:26:03.545 [traceId=0a788f7f2e9d4b09bbd41b813e5b18dd] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 03:26:03.546 [traceId=0a788f7f2e9d4b09bbd41b813e5b18dd] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 03:26:03.552 [traceId=0a788f7f2e9d4b09bbd41b813e5b18dd] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 05:42:37.055 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-19 05:42:37.063 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-19 05:42:41.568 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.12 on 192.168.0.100 with PID 66072 (/Users/zry/Desktop/sky-out/sky-server/target/classes started by zry in /Users/zry/Desktop/sky-out)
+2025-04-19 05:42:41.570 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-04-19 05:42:43.236 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-19 05:42:43.242 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-19 05:42:43.286 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2025-04-19 05:42:44.819 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 05:42:44.836 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 05:42:44.837 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 05:42:44.837 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-04-19 05:42:45.024 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 05:42:45.024 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3377 ms
+2025-04-19 05:42:45.251 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-19 05:42:45.448 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-19 05:42:45.852 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-04-19 05:42:46.783 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-04-19 05:42:47.866 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 05:42:47.911 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 05:42:48.512 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 7.782 seconds (JVM running for 9.269)
+2025-04-19 05:42:48.516 [traceId=] [main] INFO  com.sky.SkyApplication - server started
+2025-04-19 05:42:59.105 [traceId=] [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-19 05:42:59.106 [traceId=] [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-19 05:42:59.108 [traceId=] [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-04-19 05:42:59.135 [traceId=5bdb63f4562e4a798bb1cd50aa8f494a] [http-nio-8080-exec-2] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /admin/setmeal/page
+2025-04-19 05:42:59.135 [traceId=b8bcf412fadd44bc8a1266a4b59954c4] [http-nio-8080-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /ws/b0ed6me9c48
+2025-04-19 05:43:00.886 [traceId=03e01545606a435eace0c826a3820093] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 05:43:00.887 [traceId=64fc30356b96461982c1933151474f7b] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 05:43:00.954 [traceId=03e01545606a435eace0c826a3820093] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 05:43:00.954 [traceId=64fc30356b96461982c1933151474f7b] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 05:43:01.017 [traceId=64fc30356b96461982c1933151474f7b] [http-nio-8080-exec-4] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 05:43:01.017 [traceId=03e01545606a435eace0c826a3820093] [http-nio-8080-exec-3] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 05:43:01.063 [traceId=03e01545606a435eace0c826a3820093] [http-nio-8080-exec-3] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category where status = 1 and type = ? order by sort asc,create_time desc
+2025-04-19 05:43:01.063 [traceId=03e01545606a435eace0c826a3820093] [http-nio-8080-exec-3] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 2(Integer)
+2025-04-19 05:43:01.069 [traceId=03e01545606a435eace0c826a3820093] [http-nio-8080-exec-3] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 2
+2025-04-19 05:43:07.679 [traceId=876d0b7d436d4764a62a8c3250bc7b08] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 05:43:07.680 [traceId=876d0b7d436d4764a62a8c3250bc7b08] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 05:43:07.684 [traceId=876d0b7d436d4764a62a8c3250bc7b08] [http-nio-8080-exec-6] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 05:43:07.735 [traceId=474f90afe5ba4f05ad58a97962c8f9cf] [http-nio-8080-exec-7] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 05:43:07.736 [traceId=474f90afe5ba4f05ad58a97962c8f9cf] [http-nio-8080-exec-7] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 05:43:07.746 [traceId=474f90afe5ba4f05ad58a97962c8f9cf] [http-nio-8080-exec-7] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 05:43:11.603 [traceId=5a39ebe1518d4950b9f1b35b927902db] [http-nio-8080-exec-8] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 05:43:11.604 [traceId=5a39ebe1518d4950b9f1b35b927902db] [http-nio-8080-exec-8] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 05:43:11.615 [traceId=5a39ebe1518d4950b9f1b35b927902db] [http-nio-8080-exec-8] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 05:43:11.695 [traceId=5a39ebe1518d4950b9f1b35b927902db] [http-nio-8080-exec-8] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - ==>  Preparing: SELECT count(0) FROM category
+2025-04-19 05:43:11.696 [traceId=5a39ebe1518d4950b9f1b35b927902db] [http-nio-8080-exec-8] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - ==> Parameters: 
+2025-04-19 05:43:11.702 [traceId=5a39ebe1518d4950b9f1b35b927902db] [http-nio-8080-exec-8] DEBUG c.s.m.CategoryMapper.pageQuery_COUNT - <==      Total: 1
+2025-04-19 05:43:11.704 [traceId=5a39ebe1518d4950b9f1b35b927902db] [http-nio-8080-exec-8] DEBUG c.s.mapper.CategoryMapper.pageQuery - ==>  Preparing: select * from category order by sort asc , create_time desc LIMIT ?
+2025-04-19 05:43:11.704 [traceId=5a39ebe1518d4950b9f1b35b927902db] [http-nio-8080-exec-8] DEBUG c.s.mapper.CategoryMapper.pageQuery - ==> Parameters: 10(Integer)
+2025-04-19 05:43:11.712 [traceId=5a39ebe1518d4950b9f1b35b927902db] [http-nio-8080-exec-8] DEBUG c.s.mapper.CategoryMapper.pageQuery - <==      Total: 10
+2025-04-19 13:01:04.208 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-19 13:01:04.217 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-19 13:01:09.559 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.12 on 192.168.0.100 with PID 87607 (/Users/zry/Desktop/sky-out/sky-server/target/classes started by zry in /Users/zry/Desktop/sky-out)
+2025-04-19 13:01:09.560 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-04-19 13:01:11.044 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-19 13:01:11.048 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-19 13:01:11.086 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2025-04-19 13:01:12.476 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 13:01:12.486 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 13:01:12.487 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 13:01:12.487 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-04-19 13:01:12.627 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 13:01:12.627 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2997 ms
+2025-04-19 13:01:12.790 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-19 13:01:12.940 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-19 13:01:13.244 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-04-19 13:01:13.890 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-04-19 13:01:14.883 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 13:01:14.905 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 13:01:15.263 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 6.694 seconds (JVM running for 8.916)
+2025-04-19 13:01:15.266 [traceId=] [main] INFO  com.sky.SkyApplication - server started
+2025-04-19 15:56:24.760 [traceId=] [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-19 15:56:24.762 [traceId=] [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-19 15:56:24.767 [traceId=] [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2025-04-19 15:56:25.565 [traceId=d2b18413a2994017ae98e200ad0ffb87] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 15:56:25.565 [traceId=219a4b35b3854aad8c3dcc51f72c076d] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==>  Preparing: select * from employee where id=?
+2025-04-19 15:56:25.600 [traceId=219a4b35b3854aad8c3dcc51f72c076d] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 15:56:25.600 [traceId=d2b18413a2994017ae98e200ad0ffb87] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - ==> Parameters: 1(Long)
+2025-04-19 15:56:25.652 [traceId=219a4b35b3854aad8c3dcc51f72c076d] [http-nio-8080-exec-2] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 15:56:25.652 [traceId=d2b18413a2994017ae98e200ad0ffb87] [http-nio-8080-exec-1] DEBUG c.s.mapper.EmployeeMapper.queryByOne - <==      Total: 1
+2025-04-19 15:56:25.728 [traceId=219a4b35b3854aad8c3dcc51f72c076d] [http-nio-8080-exec-2] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category where status = 1 and type = ? order by sort asc,create_time desc
+2025-04-19 15:56:25.728 [traceId=219a4b35b3854aad8c3dcc51f72c076d] [http-nio-8080-exec-2] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 1(Integer)
+2025-04-19 15:56:25.738 [traceId=219a4b35b3854aad8c3dcc51f72c076d] [http-nio-8080-exec-2] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 8
+2025-04-19 15:56:25.773 [traceId=d2b18413a2994017ae98e200ad0ffb87] [http-nio-8080-exec-1] DEBUG c.sky.mapper.DishMapper.query_COUNT - ==>  Preparing: SELECT count(0) FROM dish
+2025-04-19 15:56:25.773 [traceId=d2b18413a2994017ae98e200ad0ffb87] [http-nio-8080-exec-1] DEBUG c.sky.mapper.DishMapper.query_COUNT - ==> Parameters: 
+2025-04-19 15:56:25.778 [traceId=d2b18413a2994017ae98e200ad0ffb87] [http-nio-8080-exec-1] DEBUG c.sky.mapper.DishMapper.query_COUNT - <==      Total: 1
+2025-04-19 15:56:25.781 [traceId=d2b18413a2994017ae98e200ad0ffb87] [http-nio-8080-exec-1] DEBUG com.sky.mapper.DishMapper.query - ==>  Preparing: select id, name, category_id, price, image, description, status, create_time, update_time, create_user, update_user from dish order by create_time desc LIMIT ?
+2025-04-19 15:56:25.782 [traceId=d2b18413a2994017ae98e200ad0ffb87] [http-nio-8080-exec-1] DEBUG com.sky.mapper.DishMapper.query - ==> Parameters: 10(Integer)
+2025-04-19 15:56:25.796 [traceId=d2b18413a2994017ae98e200ad0ffb87] [http-nio-8080-exec-1] DEBUG com.sky.mapper.DishMapper.query - <==      Total: 10
+2025-04-19 17:44:44.401 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-19 17:44:44.409 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-19 17:44:50.849 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.12 on 192.168.0.100 with PID 97420 (/Users/zry/Desktop/sky-out/sky-server/target/classes started by zry in /Users/zry/Desktop/sky-out)
+2025-04-19 17:44:50.851 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-04-19 17:44:51.964 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-19 17:44:51.968 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-19 17:44:52.004 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2025-04-19 17:44:53.070 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 17:44:53.086 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 17:44:53.086 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 17:44:53.086 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-04-19 17:44:53.295 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 17:44:53.295 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2386 ms
+2025-04-19 17:44:53.469 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-19 17:44:53.662 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-19 17:44:53.963 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-04-19 17:44:54.622 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-04-19 17:44:55.416 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 17:44:55.439 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 17:44:55.845 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 5.796 seconds (JVM running for 6.92)
+2025-04-19 17:44:55.848 [traceId=] [main] INFO  com.sky.SkyApplication - server started
+2025-04-19 18:30:33.540 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-04-19 18:30:33.544 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-04-19 18:30:36.965 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.12 on 192.168.0.100 with PID 98944 (/Users/zry/Desktop/sky-out/sky-server/target/classes started by zry in /Users/zry/Desktop/sky-out)
+2025-04-19 18:30:36.966 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-04-19 18:30:38.034 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-19 18:30:38.038 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-19 18:30:38.072 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2025-04-19 18:30:39.112 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 18:30:39.124 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 18:30:39.125 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 18:30:39.125 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-04-19 18:30:39.255 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 18:30:39.256 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2236 ms
+2025-04-19 18:30:39.436 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-04-19 18:30:39.588 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-04-19 18:30:39.872 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-04-19 18:30:40.506 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-04-19 18:30:41.381 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 18:30:41.424 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 18:30:41.890 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 5.539 seconds (JVM running for 6.532)
+2025-04-19 18:30:41.894 [traceId=] [main] INFO  com.sky.SkyApplication - server started
