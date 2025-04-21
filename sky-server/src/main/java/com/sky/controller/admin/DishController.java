@@ -2,7 +2,6 @@ package com.sky.controller.admin;
 
 import com.sky.dto.DishDTO;
 import com.sky.dto.DishPageQueryDTO;
-import com.sky.entity.Dish;
 import com.sky.result.PageResult;
 import com.sky.result.Result;
 import com.sky.service.DishService;
@@ -25,7 +24,7 @@ public class DishController {
 
     @PostMapping
     @ApiOperation("新增菜品")
-    public Result save(@RequestBody DishDTO dishDTO) {
+    public Result<Void> save(@RequestBody DishDTO dishDTO) {
         log.info(dishDTO.toString());
         dishService.add(dishDTO);
         return Result.success();
@@ -39,7 +38,7 @@ public class DishController {
 
     @DeleteMapping
     @ApiOperation("删除菜品")
-    public Result del(@RequestParam List<Long> ids) {
+    public Result<Void> del(@RequestParam List<Long> ids) {
         dishService.del(ids);
         return Result.success();
     }
@@ -52,15 +51,15 @@ public class DishController {
 
     @PutMapping
     @ApiOperation("菜品信息修改")
-    public Result update(@RequestBody DishDTO dishDTO) {
+    public Result<Void> update(@RequestBody DishDTO dishDTO) {
         dishService.update(dishDTO);
         return Result.success();
     }
 
     @PostMapping("/status/{status}")
     @ApiOperation("修改菜品状态")
-    public Result status(@PathVariable Integer status, @RequestParam Long id) {
-        dishService.updateStatus(status,id);
+    public Result<Void> status(@PathVariable Integer status, @RequestParam Long id) {
+        dishService.updateStatus(status, id);
         return Result.success();
     }
 }

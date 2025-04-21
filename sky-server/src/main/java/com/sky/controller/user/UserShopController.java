@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/user")
 @RequiredArgsConstructor
 public class UserShopController {
-    private final RedisTemplate redisTemplate;
+    private final RedisTemplate<String, Object> redisTemplate;
 
     @GetMapping("/status")
-    public Result nowStatus() {
+    public Result<Object> nowStatus() {
         Object value = redisTemplate.opsForValue().get(RedisConstant.STATUS);
         return Result.success(value);
     }

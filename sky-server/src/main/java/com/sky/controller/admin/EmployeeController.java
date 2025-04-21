@@ -15,10 +15,8 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.websocket.server.PathParam;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,9 +37,6 @@ public class EmployeeController {
 
     /**
      * 登录
-     *
-     * @param employeeLoginDTO
-     * @return
      */
     @PostMapping("/login")
     public Result<EmployeeLoginVO> login(@RequestBody EmployeeLoginDTO employeeLoginDTO) {
@@ -69,8 +64,6 @@ public class EmployeeController {
 
     /**
      * 退出
-     *
-     * @return
      */
     @PostMapping("/logout")
     public Result<String> logout() {
@@ -82,7 +75,7 @@ public class EmployeeController {
      */
     @PostMapping
     @ApiOperation("新增员工")
-    public Result save(@RequestBody EmployeeDTO employeeDTO) {
+    public Result<Void> save(@RequestBody EmployeeDTO employeeDTO) {
         log.info("print employee information:{}", employeeDTO);
         employeeService.add(employeeDTO);
         return Result.success();
@@ -107,12 +100,13 @@ public class EmployeeController {
     public Result<Employee> query(@PathVariable Long id) {
         return Result.success(employeeService.queryByOne(id));
     }
+
     /**
      * 修改员工
      */
     @PutMapping
     @ApiOperation("修改员工")
-    public Result update(@RequestBody EmployeeDTO employeeDTO) {
+    public Result<Void> update(@RequestBody EmployeeDTO employeeDTO) {
         log.info(employeeDTO.toString());
         employeeService.update(employeeDTO);
         return Result.success();
@@ -123,8 +117,8 @@ public class EmployeeController {
      */
     @PostMapping("/status/{status}")
     @ApiOperation("启用/禁用员工账户")
-    public Result updateStatus(@PathVariable Integer status, @RequestParam Long id) {
-        employeeService.updateStatus(status,id);
+    public Result<Void> updateStatus(@PathVariable Integer status, @RequestParam Long id) {
+        employeeService.updateStatus(status, id);
         return Result.success();
     }
 }

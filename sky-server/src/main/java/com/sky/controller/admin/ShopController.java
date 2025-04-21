@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.web.bind.annotation.*;
 
 @Slf4j
@@ -16,18 +15,18 @@ import org.springframework.web.bind.annotation.*;
 @Api(tags = "商店状态")
 @RequiredArgsConstructor
 public class ShopController {
-    private final RedisTemplate redisTemplate;
+    private final RedisTemplate<String, Object> redisTemplate;
 
 
     @PutMapping("/{status}")
     @ApiOperation("店铺状态")
-    public Result status(@PathVariable Integer status) {
+    public Result<Void> status(@PathVariable Integer status) {
         redisTemplate.opsForValue().set(RedisConstant.STATUS, status);
         return Result.success();
     }
 
     @GetMapping("/status")
-    public Result nowStatus() {
+    public Result<Object> nowStatus() {
         Object value = redisTemplate.opsForValue().get(RedisConstant.STATUS);
         return Result.success(value);
     }
