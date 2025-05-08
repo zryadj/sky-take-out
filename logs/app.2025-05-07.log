@@ -1,0 +1,37 @@
+2025-05-07 18:08:07.344 [traceId=] [main] INFO  com.sky.SkyApplication - Starting SkyApplication using Java 17.0.14 on Win11-PC with PID 15712 (C:\Users\Administrator\Desktop\JavaTest\sky-take-out\sky-server\target\classes started by Administrator in C:\Users\Administrator\Desktop\JavaTest\sky-take-out)
+2025-05-07 18:08:07.350 [traceId=] [main] INFO  com.sky.SkyApplication - The following 1 profile is active: "dev"
+2025-05-07 18:08:08.262 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-07 18:08:08.266 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-07 18:08:08.297 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2025-05-07 18:08:09.192 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-07 18:08:09.205 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-07 18:08:09.205 [traceId=] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-07 18:08:09.205 [traceId=] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-05-07 18:08:09.417 [traceId=] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-07 18:08:09.418 [traceId=] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2011 ms
+2025-05-07 18:08:09.582 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-05-07 18:08:09.734 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-05-07 18:08:10.062 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-05-07 18:08:10.658 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-05-07 18:08:11.296 [traceId=] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-07 18:08:11.314 [traceId=] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-07 18:08:11.587 [traceId=] [main] INFO  com.sky.SkyApplication - Started SkyApplication in 4.788 seconds (JVM running for 5.974)
+2025-05-07 18:08:11.589 [traceId=] [main] INFO  com.sky.SkyApplication - server started
+2025-05-07 18:08:11.945 [traceId=] [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-07 18:08:11.945 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-07 18:08:11.946 [traceId=] [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-07 18:08:11.997 [traceId=a991555b72674c5ab2078151b64a0285] [http-nio-8080-exec-1] INFO  c.s.c.admin.EmployeeController - 员工登录：EmployeeLoginDTO(username=admin, password=123456)
+2025-05-07 18:08:12.188 [traceId=a991555b72674c5ab2078151b64a0285] [http-nio-8080-exec-1] DEBUG c.s.m.EmployeeMapper.getByUsername - ==>  Preparing: select * from employee where username = ?
+2025-05-07 18:08:12.216 [traceId=a991555b72674c5ab2078151b64a0285] [http-nio-8080-exec-1] DEBUG c.s.m.EmployeeMapper.getByUsername - ==> Parameters: admin(String)
+2025-05-07 18:08:12.242 [traceId=a991555b72674c5ab2078151b64a0285] [http-nio-8080-exec-1] DEBUG c.s.m.EmployeeMapper.getByUsername - <==      Total: 1
+2025-05-07 18:18:14.978 [traceId=4c035148c2d34902b3dfa5b371b1eaa1] [http-nio-8080-exec-3] INFO  c.s.c.admin.EmployeeController - 员工登录：EmployeeLoginDTO(username=admin, password=123456)
+2025-05-07 18:18:15.002 [traceId=4c035148c2d34902b3dfa5b371b1eaa1] [http-nio-8080-exec-3] ERROR c.a.d.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 602765
+2025-05-07 18:18:15.010 [traceId=4c035148c2d34902b3dfa5b371b1eaa1] [http-nio-8080-exec-3] DEBUG c.s.m.EmployeeMapper.getByUsername - ==>  Preparing: select * from employee where username = ?
+2025-05-07 18:18:15.010 [traceId=4c035148c2d34902b3dfa5b371b1eaa1] [http-nio-8080-exec-3] DEBUG c.s.m.EmployeeMapper.getByUsername - ==> Parameters: admin(String)
+2025-05-07 18:18:15.012 [traceId=4c035148c2d34902b3dfa5b371b1eaa1] [http-nio-8080-exec-3] DEBUG c.s.m.EmployeeMapper.getByUsername - <==      Total: 1
+2025-05-07 19:08:35.426 [traceId=67067cd45ccf43dd8880d59c5a747b57] [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /ws/fx9fvmsk30j
+2025-05-07 22:23:55.172 [traceId=7f246482a0c140ebb0b15d8f2bd50f0d] [http-nio-8080-exec-2] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /user/shop/status
+2025-05-07 22:23:58.035 [traceId=d8126df395c245fe844f0ed6d0deca7d] [http-nio-8080-exec-3] WARN  o.s.web.servlet.PageNotFound - No mapping for POST /user/user/login
+2025-05-07 22:24:01.654 [traceId=64c5f04d355d4d7cbc4d8efe4a1346c3] [http-nio-8080-exec-4] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /user/order/historyOrders
+2025-05-07 22:24:05.441 [traceId=a401db69e76f4f37bc3c040595cb7f1a] [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /user/shop/status
+2025-05-07 22:24:07.596 [traceId=d98172b4015849ad8f9d6b2d20152e7e] [http-nio-8080-exec-6] WARN  o.s.web.servlet.PageNotFound - No mapping for POST /user/user/login

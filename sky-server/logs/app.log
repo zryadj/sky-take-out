@@ -1,0 +1,36 @@
+2025-05-07 18:08:03.781 [traceId=] [main] INFO  com.sky.test.HttpTest - Starting HttpTest using Java 17.0.14 on Win11-PC with PID 5988 (started by Administrator in C:\Users\Administrator\Desktop\JavaTest\sky-take-out\sky-server)
+2025-05-07 18:08:03.784 [traceId=] [main] INFO  com.sky.test.HttpTest - The following 1 profile is active: "dev"
+2025-05-07 18:08:04.652 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-07 18:08:04.654 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-07 18:08:04.683 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2025-05-07 18:08:05.795 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-05-07 18:08:06.113 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-05-07 18:08:06.774 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-05-07 18:08:08.231 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-05-07 18:08:11.087 [traceId=] [main] INFO  com.sky.test.HttpTest - Started HttpTest in 7.783 seconds (JVM running for 9.281)
+2025-05-07 18:08:12.497 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-05-07 18:08:12.498 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-05-07 18:08:27.861 [traceId=] [main] INFO  com.sky.test.HttpTest - Starting HttpTest using Java 17.0.14 on Win11-PC with PID 11732 (started by Administrator in C:\Users\Administrator\Desktop\JavaTest\sky-take-out\sky-server)
+2025-05-07 18:08:27.861 [traceId=] [main] INFO  com.sky.test.HttpTest - The following 1 profile is active: "dev"
+2025-05-07 18:08:28.659 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-07 18:08:28.659 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-07 18:08:28.691 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2025-05-07 18:08:29.439 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-05-07 18:08:29.641 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-05-07 18:08:30.049 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-05-07 18:08:31.255 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-05-07 18:08:33.770 [traceId=] [main] INFO  com.sky.test.HttpTest - Started HttpTest in 6.315 seconds (JVM running for 7.323)
+2025-05-07 18:18:15.052 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-05-07 18:18:15.052 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-05-07 18:18:18.135 [traceId=] [main] INFO  com.sky.test.HttpTest - Starting HttpTest using Java 17.0.14 on Win11-PC with PID 12804 (started by Administrator in C:\Users\Administrator\Desktop\JavaTest\sky-take-out\sky-server)
+2025-05-07 18:18:18.136 [traceId=] [main] INFO  com.sky.test.HttpTest - The following 1 profile is active: "dev"
+2025-05-07 18:18:18.883 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-07 18:18:18.887 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-07 18:18:18.916 [traceId=] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2025-05-07 18:18:19.594 [traceId=] [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-05-07 18:18:19.721 [traceId=] [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-05-07 18:18:20.110 [traceId=] [main] INFO  com.sky.config.MinioConfiguration - 加载minio配置值：MinioProperties(endpoint=http://localhost:9000, accessKey=minioadmin, secretKey=minioadmin, bucketName=mybucket)
+2025-05-07 18:18:21.091 [traceId=] [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2025-05-07 18:18:23.113 [traceId=] [main] INFO  com.sky.test.HttpTest - Started HttpTest in 5.353 seconds (JVM running for 6.375)
+2025-05-07 18:18:23.140 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-05-07 18:18:23.142 [traceId=] [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
