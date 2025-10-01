@@ -21,7 +21,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -99,18 +99,19 @@ public class DishServiceImpl implements DishService {
      * @param dishDTO
      */
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public void update(DishDTO dishDTO) {
         Dish dish = new Dish();
         BeanUtils.copyProperties(dishDTO, dish);
-        dish.setStatus(StatusConstant.DISABLE);
         dishMapper.update(dish);
         //空 有
         //有 有
         //有 空
         //空 空
-        if (!dishDTO.getFlavors().isEmpty()) {
-            dishFlavorMapper.delBatch(Arrays.asList(dish.getId()));
-            dishFlavorMapper.addBatch(dishDTO.getId(), dishDTO.getFlavors());
+        dishFlavorMapper.delBatch(Collections.singletonList(dish.getId()));
+        List<DishFlavor> flavors = dishDTO.getFlavors();
+        if (flavors != null && !flavors.isEmpty()) {
+            dishFlavorMapper.addBatch(dishDTO.getId(), flavors);
         }
 
     }
