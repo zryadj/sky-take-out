@@ -20,8 +20,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.CollectionUtils;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -44,7 +45,10 @@ public class DishServiceImpl implements DishService {
         dishMapper.add(dish);
         Long id = dish.getId();
 
-        dishFlavorMapper.addBatch(id, dishDTO.getFlavors());
+        List<DishFlavor> flavors = dishDTO.getFlavors();
+        if (!CollectionUtils.isEmpty(flavors)) {
+            dishFlavorMapper.addBatch(id, flavors);
+        }
     }
 
     @Override
@@ -108,9 +112,10 @@ public class DishServiceImpl implements DishService {
         //有 有
         //有 空
         //空 空
-        if (!dishDTO.getFlavors().isEmpty()) {
-            dishFlavorMapper.delBatch(Arrays.asList(dish.getId()));
-            dishFlavorMapper.addBatch(dishDTO.getId(), dishDTO.getFlavors());
+        dishFlavorMapper.delBatch(Collections.singletonList(dish.getId()));
+        List<DishFlavor> flavors = dishDTO.getFlavors();
+        if (!CollectionUtils.isEmpty(flavors)) {
+            dishFlavorMapper.addBatch(dishDTO.getId(), flavors);
         }
 
     }
