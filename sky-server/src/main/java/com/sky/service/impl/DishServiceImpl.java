@@ -20,10 +20,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.CollectionUtils;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Objects;
 
 @Service
 @RequiredArgsConstructor
@@ -44,7 +45,10 @@ public class DishServiceImpl implements DishService {
         dishMapper.add(dish);
         Long id = dish.getId();
 
-        dishFlavorMapper.addBatch(id, dishDTO.getFlavors());
+        List<DishFlavor> flavors = dishDTO.getFlavors();
+        if (!CollectionUtils.isEmpty(flavors)) {
+            dishFlavorMapper.addBatch(id, flavors);
+        }
     }
 
     @Override
@@ -64,16 +68,21 @@ public class DishServiceImpl implements DishService {
     @Override
     @Transactional(rollbackFor = Exception.class)
     public void del(List<Long> ids) {
+        if (CollectionUtils.isEmpty(ids)) {
+            return;
+        }
         //起售商品不能删除
         List<Dish> dishList = dishMapper.selectByList(ids);
-        List<Long> collectDel = dishList.stream().filter(dish -> dish.getStatus() == 1)
-                .map(Dish::getId).collect(Collectors.toList());
-        if (!collectDel.isEmpty()) {
+        boolean hasEnabledDish = dishList.stream()
+                .map(Dish::getStatus)
+                .filter(Objects::nonNull)
+                .anyMatch(status -> status.equals(StatusConstant.ENABLE));
+        if (hasEnabledDish) {
             throw new DeletionNotAllowedException(MessageConstant.DISH_ON_SALE);
         }
         //被套餐关联的商品不能删除
         List<Long> dishIds = setMealDishMapper.getMealIdsByDishIds(ids);
-        if (!dishIds.isEmpty()) {
+        if (!CollectionUtils.isEmpty(dishIds)) {
             throw new DeletionNotAllowedException(MessageConstant.DISH_BE_RELATED_BY_SETMEAL);
         }
         //删除菜品关联菜品也进行删除
@@ -108,9 +117,13 @@ public class DishServiceImpl implements DishService {
         //有 有
         //有 空
         //空 空
-        if (!dishDTO.getFlavors().isEmpty()) {
-            dishFlavorMapper.delBatch(Arrays.asList(dish.getId()));
-            dishFlavorMapper.addBatch(dishDTO.getId(), dishDTO.getFlavors());
+        Long dishId = dish.getId();
+        List<DishFlavor> flavors = dishDTO.getFlavors();
+        if (dishId != null) {
+            dishFlavorMapper.delBatch(Collections.singletonList(dishId));
+            if (!CollectionUtils.isEmpty(flavors)) {
+                dishFlavorMapper.addBatch(dishId, flavors);
+            }
         }
 
     }

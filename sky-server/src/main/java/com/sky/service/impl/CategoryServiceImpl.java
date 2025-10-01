@@ -33,7 +33,7 @@ public class CategoryServiceImpl implements CategoryService {
     @Autowired
     private DishMapper dishMapper;
     @Autowired
-    private SetMealMapper setmealMapper;
+    private SetMealMapper setMealMapper;
 
     /**
      * 新增分类
@@ -47,11 +47,14 @@ public class CategoryServiceImpl implements CategoryService {
         //分类状态默认为禁用状态0
         category.setStatus(StatusConstant.DISABLE);
 
+        LocalDateTime now = LocalDateTime.now();
+        Long currentId = BaseContext.getCurrentId();
+
         //设置创建时间、修改时间、创建人、修改人
-        category.setCreateTime(LocalDateTime.now());
-        category.setUpdateTime(LocalDateTime.now());
-        category.setCreateUser(BaseContext.getCurrentId());
-        category.setUpdateUser(BaseContext.getCurrentId());
+        category.setCreateTime(now);
+        category.setUpdateTime(now);
+        category.setCreateUser(currentId);
+        category.setUpdateUser(currentId);
 
         categoryMapper.insert(category);
     }
@@ -81,7 +84,7 @@ public class CategoryServiceImpl implements CategoryService {
         }
 
         //查询当前分类是否关联了套餐，如果关联了就抛出业务异常
-        count = setmealMapper.countByCategoryId(id);
+        count = setMealMapper.countByCategoryId(id);
         if(count > 0){
             //当前分类下有菜品，不能删除
             throw new DeletionNotAllowedException(MessageConstant.CATEGORY_BE_RELATED_BY_SETMEAL);
@@ -100,8 +103,10 @@ public class CategoryServiceImpl implements CategoryService {
         BeanUtils.copyProperties(categoryDTO,category);
 
         //设置修改时间、修改人
-        category.setUpdateTime(LocalDateTime.now());
-        category.setUpdateUser(BaseContext.getCurrentId());
+        LocalDateTime now = LocalDateTime.now();
+        Long currentId = BaseContext.getCurrentId();
+        category.setUpdateTime(now);
+        category.setUpdateUser(currentId);
 
         categoryMapper.update(category);
     }
@@ -112,11 +117,13 @@ public class CategoryServiceImpl implements CategoryService {
      * @param id
      */
     public void startOrStop(Integer status, Long id) {
+        LocalDateTime now = LocalDateTime.now();
+        Long currentId = BaseContext.getCurrentId();
         Category category = Category.builder()
                 .id(id)
                 .status(status)
-                .updateTime(LocalDateTime.now())
-                .updateUser(BaseContext.getCurrentId())
+                .updateTime(now)
+                .updateUser(currentId)
                 .build();
         categoryMapper.update(category);
     }
