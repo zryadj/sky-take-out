@@ -14,12 +14,15 @@ import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Aspect
 @Component
 @Slf4j
 public class AutoFillAspect {
+
+    private final Map<Class<?>, AutoFillMetadata> metadataCache = new ConcurrentHashMap<>();
     /**
      * 切入点
      */
@@ -41,35 +44,80 @@ public class AutoFillAspect {
             return;
         }
         Object arg = args[0];
+        AutoFillMetadata metadata = getMetadata(arg.getClass());
         //准备赋值数据
         Long currentId = BaseContext.getCurrentId();
         LocalDateTime now = LocalDateTime.now();
         //反射赋值
         if (value == OperationType.INSERT) {
             try {
-                Method setCreateTime = arg.getClass().getDeclaredMethod(AutoFillConstant.SET_CREATE_TIME, LocalDateTime.class);
-                Method setUpdateTime = arg.getClass().getDeclaredMethod(AutoFillConstant.SET_UPDATE_TIME, LocalDateTime.class);
-                Method setCreateUser = arg.getClass().getDeclaredMethod(AutoFillConstant.SET_CREATE_USER, Long.class);
-                Method setUpdateUser = arg.getClass().getDeclaredMethod(AutoFillConstant.SET_UPDATE_USER, Long.class);
-
-                setCreateTime.invoke(arg, now);
-                setUpdateTime.invoke(arg, now);
-                setCreateUser.invoke(arg, currentId);
-                setUpdateUser.invoke(arg, currentId);
+                metadata.getSetCreateTime().invoke(arg, now);
+                metadata.getSetUpdateTime().invoke(arg, now);
+                metadata.getSetCreateUser().invoke(arg, currentId);
+                metadata.getSetUpdateUser().invoke(arg, currentId);
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
         } else if (value == OperationType.UPDATE) {
 
             try {
-
-                Method setUpdateTime = arg.getClass().getDeclaredMethod(AutoFillConstant.SET_UPDATE_TIME, LocalDateTime.class);
-                Method setUpdateUser = arg.getClass().getDeclaredMethod(AutoFillConstant.SET_UPDATE_USER, Long.class);
-                setUpdateTime.invoke(arg, now);
-                setUpdateUser.invoke(arg, currentId);
+                metadata.getSetUpdateTime().invoke(arg, now);
+                metadata.getSetUpdateUser().invoke(arg, currentId);
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
+        }
+    }
+
+    private AutoFillMetadata getMetadata(Class<?> targetClass) {
+        return metadataCache.computeIfAbsent(targetClass, this::buildMetadata);
+    }
+
+    private AutoFillMetadata buildMetadata(Class<?> targetClass) {
+        try {
+            Method setCreateTime = resolveMethod(targetClass, AutoFillConstant.SET_CREATE_TIME, LocalDateTime.class);
+            Method setUpdateTime = resolveMethod(targetClass, AutoFillConstant.SET_UPDATE_TIME, LocalDateTime.class);
+            Method setCreateUser = resolveMethod(targetClass, AutoFillConstant.SET_CREATE_USER, Long.class);
+            Method setUpdateUser = resolveMethod(targetClass, AutoFillConstant.SET_UPDATE_USER, Long.class);
+            return new AutoFillMetadata(setCreateTime, setUpdateTime, setCreateUser, setUpdateUser);
+        } catch (NoSuchMethodException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private Method resolveMethod(Class<?> targetClass, String methodName, Class<?> parameterType) throws NoSuchMethodException {
+        Method method = targetClass.getDeclaredMethod(methodName, parameterType);
+        method.setAccessible(true);
+        return method;
+    }
+
+    private static class AutoFillMetadata {
+        private final Method setCreateTime;
+        private final Method setUpdateTime;
+        private final Method setCreateUser;
+        private final Method setUpdateUser;
+
+        AutoFillMetadata(Method setCreateTime, Method setUpdateTime, Method setCreateUser, Method setUpdateUser) {
+            this.setCreateTime = setCreateTime;
+            this.setUpdateTime = setUpdateTime;
+            this.setCreateUser = setCreateUser;
+            this.setUpdateUser = setUpdateUser;
+        }
+
+        Method getSetCreateTime() {
+            return setCreateTime;
+        }
+
+        Method getSetUpdateTime() {
+            return setUpdateTime;
+        }
+
+        Method getSetCreateUser() {
+            return setCreateUser;
+        }
+
+        Method getSetUpdateUser() {
+            return setUpdateUser;
         }
     }
 }
